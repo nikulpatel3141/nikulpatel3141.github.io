@@ -1,0 +1,54 @@
+html {
+	background-color: lightgrey;
+	font-size: 18px;
+}
+
+body {
+	position: relative;
+}
+
+
+
+ul {
+	background: white;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+li {
+	margin-left: 20px;
+}
+
+.container {
+	position: relative;
+	height: 100px;
+	display: block;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+
+.container h1 {
+	float: left;
+	display: inline;
+
+}
+
+.container .navbar {
+	float: right;
+	display: inline;
+}
+
+.container ul {
+	list-style: none;
+}
+
+.container ul li {
+	display: inline-block;
+}
+
+
+footer ul li {
+	display: inline-block;
+}
