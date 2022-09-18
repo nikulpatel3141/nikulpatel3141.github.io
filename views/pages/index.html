@@ -1,31 +1,18 @@
-{{ template "header.html"}}
+{{ define "pages/index.html" }}
 
-{{ template "navbar.html"}}
-	
 		<div>
 			
-		<h2>Intro</h2>
+		<h2>About Myself</h2>
 		<p>
-			Write an intro here...
+			Please see my CV for my academic and professional experience.
 		</p>
 
 
-		<h2>About</h2>
-		<p>This is my personal website. I intend to use this as a playground for me to experiment with and learn new things.
-		<br>
-		I'm not sure exactly what will be on this website or who the intended audience is, though I hope I'll learn a lot and have fun along the way!
+		<h2>About this website</h2>
+		<p>I've made this website primarily as a playground for me to experiment with new technologies and also to hopefully share some useful information. Please take a look at the Posts/Resources/Projects sections.
 		</p>
 		</div>
 
-	<div>
-		<ul>
-			<li> Item 1 </li>
-		</ul>
 
-	</div>
-
-
-	</body>
-
-
-{{ template "footer.html"}}
+{{ template "components/footer.html"}}
+{{ end }}

@@ -1,14 +1,20 @@
+{{ define "components/header.html" }}
 
 <html lang='en'>
 	<head>
-		<link rel="stylesheet" href="index.css">
+		<!-- <link rel="stylesheet" href="index.css"> -->
+		<link href="/static/css/index.css" rel="stylesheet">
 		<meta
 			name="Nikul Patel"
 			content="This is my personal website. I intend to use this as a playground for me to experiment with and learn new things. I'm not sure exactly what will be on this website or who the intended audience is, though I hope I'll learn a lot and have fun along the way!"
 		>
-		<title>Nikul Patel </title>
+		<title> Nikul Patel </title>
 	</head>
-
+	
 	<body>
+		
+		{{ template "components/navbar.html"}}
 
-		<link href="/static/css/index.css" rel="stylesheet" type="text/css" />
+	<hr/>
+
+{{ end }}

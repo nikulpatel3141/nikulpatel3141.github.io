@@ -1,5 +1,5 @@
 html {
-	background-color: lightgrey;
+	background-color: rgb(234, 234, 234);
 	font-size: 18px;
 }
 
@@ -7,12 +7,8 @@ body {
 	position: relative;
 }
 
-
-
 ul {
-	background: white;
 	padding: 10px;
-	border: 1px solid black;
 }
 
 li {
