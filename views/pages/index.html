@@ -1,17 +1,30 @@
-{{ define "pages/index.html" }}
-		<div class="container mx-auto p-2">
-			
-		<h2>About Myself</h2>
-		<p>
-			Please see my CV for my academic and professional experience.
-		</p>
+{{ define "pages/index.html" }} {{ template "components/header.html"}}
+<div class="container mx-auto p-2">
+  <!-- <div class="relative">
+			<figure class="absolute top-0 right-0">
+				<img src="/static/images/portrait.jpg" width="150px" height="200px" alt="A Portrait of Myself!">
+			</figure>
+		</div> -->
+  <div>
+    <div>
+      <p>Hi, welcome to my website!</p>
+    </div>
+    <h2>About Myself</h2>
+    <p>
+      I'm currently working as a Risk Analyst at a Hedge Fund in London, though
+      I spend most of my time writing code. Please see my
+      <a href="/static/content/Nikul_Patel_CV.pdf">CV</a> for more details.
+    </p>
+  </div>
 
+  <div>
+    <h2>About this website</h2>
+    <p class="absolute">
+      I've made this website primarily as a playground for me to experiment with
+      new technologies and also to hopefully share some useful information.
+      Please take a look at the Posts/Resources/Projects sections.
+    </p>
+  </div>
+</div>
 
-		<h2>About this website</h2>
-		<p>I've made this website primarily as a playground for me to experiment with new technologies and also to hopefully share some useful information. Please take a look at the Posts/Resources/Projects sections.
-		</p>
-		</div>
-
-
-{{ template "components/footer.html"}}
-{{ end }}
+{{ template "components/footer.html"}} {{ end }}

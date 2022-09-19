@@ -16,8 +16,11 @@ import (
 //}
 
 func defaultHandler(c *gin.Context) {
-	c.HTML(http.StatusOK, "components/header.html", gin.H{"title": "Nikul Patel"})
 	c.HTML(http.StatusOK, "pages/index.html", gin.H{"title": "Nikul Patel"})
+}
+
+func aboutHandler(c *gin.Context) {
+	c.HTML(http.StatusOK, "pages/about.html", gin.H{"title": "Nikul Patel"})
 }
 
 func main() {
@@ -31,6 +34,7 @@ func main() {
 	r.Static("/static", "./static/")
 
 	r.GET("/", defaultHandler)
+	r.GET("/about", aboutHandler)
 
 	r.Run("localhost:8080")
 }

@@ -1,0 +1,25 @@
+{{ define "pages/about.html" }} {{ template "components/header.html"}}
+<div class="container mx-auto p-2">
+  <div>
+    <h2>About This Website</h2>
+    <p>
+        I've made this website using <a href="https://go.dev/">Go</a> + <a href="https://github.com/gin-gonic/gin">Gin</a> for the backend and <a href="https://github.com/tailwindlabs/tailwindcss">Tailwind CSS</a> for styling.
+    </p>
+    <br/>
+    <div>
+        <p>This website exists for a few reasons:</p>
+        <ol class="list-decimal list-inside">
+            <li>To learn Go + basic Web Development</li>
+            <li>To share useful information and resources</li>
+            <li>As a playground to experiment with and showcase new technologies</li>
+        </ol>
+    </div>
+  </div>
+  <br/>
+  <div>
+    <p class="absolute">
+        Please reach out to me on Linkedin if you have any feedback for me.
+    </p>
+  </div>
+</div>
+{{ template "components/footer.html"}} {{ end }}
