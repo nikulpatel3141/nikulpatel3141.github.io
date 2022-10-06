@@ -1,74 +1,77 @@
-baseurl = "/"
+baseURL = "/"
+theme = "gokarna"
+
+defaultContentLanguage = "en"
 languageCode = "en-us"
-theme = "hello-friend"
-paginate = 5
+enableEmoji = true
+
+title = "Nikul Patel's Blog"
+
+# Automatically generate robots.txt
+enableRobotsTXT = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 1
+  [[menu.main]]
+    identifier = "resources"
+    name = "Resources"
+    url = "/resources"
+    weight = 3
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects"
+    weight = 2
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "Nikul_Patel_CV.pdf"
+    weight = 4
+  [[menu.main]]
+    identifier = "github"
+    name = ""
+    url = "https://github.com/nikulpatel462"
+    weight = 5
+    pre = "<span data-feather='github'></span>"
+  [[menu.main]]
+    identifier = "linkedin"
+    name = ""
+    url = "https://www.linkedin.com/in/nikul-patel-048a47113/"
+    weight = 6
+    pre = "<span data-feather='linkedin'></span>"
+
 
 [params]
-  # dir name of your blog content (default is `content/posts`).
-  # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "posts"
+  # URL for the avatar on homepage
+  #avatarURL = ""
 
-  # OS theme is default when not provided, but you can force it to "light" or "dark"
-  defaultTheme = "dark"
+  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
+  avatarSize = ""
 
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 4
+  # Description to display on homepage
+  description = ""
 
-  # Show reading time in minutes for posts
-  showReadingTime = false
+  # Accent color is displayed when you hover over <a> tags
+  accentColor = "#FF4D4D"
 
-  # Show table of contents at the top of your posts (defaults to false)
-  # Alternatively, add this param to post front matter for specific posts
-  # toc = true
+  # You can use this to inject any HTML in the <head> tag.
+  # Ideal usecase for this is to import custom js/css or add your analytics snippet
+  customHeadHTML = ""
 
-  # Show full page content in RSS feed items
-  #(default is Description or Summary metadata in the front matter)
-  # rssFullText = true
+  # Keywords relevant for SEO
+  metaKeywords = ["blog", "gokarna", "hugo"]
 
-[languages]
-  [languages.en]
-    title = "Nikul Patel"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
-    copyright = "Copy, right?"
-    menuMore = "Show more"
-    writtenBy = "Written by"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    minuteReadingTime = "min read"
-    dateFormatSingle = "2006-01-02"
-    dateFormatList = "2006-01-02"
-    # leave empty to disable, enter display text to enable
-    # lastModDisplay = ""
+  # If you want to display posts on the homepage, the options are
+  # "popular" (order posts by weight), "recent" (order posts by date)
+  # or "" (do not display, default option)
+  showPostsOnHomePage = ""
 
-    [languages.en.params.logo]
-      logoText = "Nikul Patel's Blog"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+  # Footer text
+  footer = "I always do that, get into something and see how far I can go. ― Richard P. Feynman, Surely You're Joking, Mr. Feynman!"
+  copyright = ""
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-        weight = 1
-      [[languages.en.menu.main]]
-        identifier = "resources"
-        name = "Resources"
-        url = "/resources"
-        weight = 3
-      [[languages.en.menu.main]]
-        identifier = "projects"
-        name = "Projects"
-        url = "/projects"
-        weight = 2
-      [[languages.en.menu.main]]
-        identifier = "cv"
-        name = "CV"
-        url = "Nikul_Patel_CV.pdf"
-        weight = 4
+  favicon = "favicon.ico"
