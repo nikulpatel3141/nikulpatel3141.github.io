@@ -1,7 +1,7 @@
 baseURL = "/"
 relativeURLs = "True"
 
-theme = "gokarna"
+theme = "PaperMod"
 
 defaultContentLanguage = "en"
 languageCode = "en"
@@ -11,6 +11,10 @@ title = "Nikul Patel's Blog"
 
 # Automatically generate robots.txt
 enableRobotsTXT = true
+
+[minify]
+disableXML = true
+minifyOutput = true
 
 [menu]
   [[menu.main]]
@@ -33,20 +37,18 @@ enableRobotsTXT = true
     name = "CV"
     url = "files/Nikul_Patel_CV.pdf"
     weight = 4
-  [[menu.main]]
-    identifier = "github"
-    name = ""
-    url = "https://github.com/nikulpatel462"
-    weight = 5
-    pre = "<span data-feather='github'></span>"
-    #pre = "<img class='svg-inject' src='/icons/github.svg'></span>"
-  [[menu.main]]
-    identifier = "linkedin"
-    name = ""
-    url = "https://www.linkedin.com/in/nikul-patel-048a47113/"
-    weight = 6
-    #pre = "<span data-feather='linkedin'></span>"
-    pre = "<img class='svg-inject' src='/icons/linkedin.svg'></span>"
+#  [[menu.main]]
+#    identifier = "github"
+#    name = "GitHub"
+#    url = "https://github.com/nikulpatel462"
+#    weight = 5
+#    pre = "<img src='/icons/github.svg'>"
+#  [[menu.main]]
+#    identifier = "linkedin"
+#    name = "LinkedIn"
+#    url = "https://www.linkedin.com/in/nikul-patel-048a47113/"
+#    weight = 6
+#    pre = "<img class='svg-inject' src='/icons/linkedin.svg'>"
 
 
 [markup]
@@ -57,37 +59,33 @@ enableRobotsTXT = true
 
 
 [params]
-  # URL for the avatar on homepage
-  #avatarURL = ""
-
-  # Choose one of size-xs, size-s, size-m, size-l & size-xl. (Default: size-m)
-  avatarSize = ""
-
-  # Description to display on homepage
-  description = ""
-
-  # Accent color is displayed when you hover over <a> tags
-  accentColor = "#FF4D4D"
-
-  # You can use this to inject any HTML in the <head> tag.
-  # Ideal usecase for this is to import custom js/css or add your analytics snippet
-
-  # Keywords relevant for SEO
-  metaKeywords = ["blog", "gokarna", "hugo"]
-
-  # If you want to display posts on the homepage, the options are
-  # "popular" (order posts by weight), "recent" (order posts by date)
-  # or "" (do not display, default option)
-  showPostsOnHomePage = "recent"
-
-  # Footer text
   footer = "I always do that, get into something and see how far I can go. ― Richard P. Feynman, Surely You're Joking, Mr. Feynman!"
 
-  socialIcons = [
-    {name = "linkedin", url = "https://www.linkedin.com/in/nikul-patel-048a47113/"},
-    {name = "github", url = "https://github.com/nikulpatel462"},
-    {name = "email", url = "mailto:example@example.com"}
-  ]
+  [params.assets]
+    favicon = "/static/favicon.ico"
+    favicon16x16 = "/static/favicon.ico"
+    favicon32x32 = "/static/favicon.ico"
+    apple_touch_icon = "/static/favicon.ico"
+    safari_pinned_tab = "/static/favicon.ico"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/nikulpatel462"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/nikul-patel-048a47113/"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:example.gmail.com"
+
+
+  ShareButtons = ["linkedin", "twitter"]
+
+  [params.profileMode]
+    enabled = true
+
 
   customHeadHTML = """
   <link rel="stylesheet" type="text/css" href="/css/bam.css">
