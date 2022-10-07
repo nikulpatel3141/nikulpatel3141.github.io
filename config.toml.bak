@@ -1,7 +1,7 @@
 baseURL = "/"
 relativeURLs = "True"
 
-theme = "PaperMod"
+theme = "blowfish"
 
 defaultContentLanguage = "en"
 languageCode = "en"
