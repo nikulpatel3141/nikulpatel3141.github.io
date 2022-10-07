@@ -1,8 +1,10 @@
 baseURL = "/"
+relativeURLs = "True"
+
 theme = "gokarna"
 
 defaultContentLanguage = "en"
-languageCode = "en-us"
+languageCode = "en"
 enableEmoji = true
 
 title = "Nikul Patel's Blog"
@@ -29,7 +31,7 @@ enableRobotsTXT = true
   [[menu.main]]
     identifier = "cv"
     name = "CV"
-    url = "Nikul_Patel_CV.pdf"
+    url = "files/Nikul_Patel_CV.pdf"
     weight = 4
   [[menu.main]]
     identifier = "github"
@@ -37,12 +39,21 @@ enableRobotsTXT = true
     url = "https://github.com/nikulpatel462"
     weight = 5
     pre = "<span data-feather='github'></span>"
+    #pre = "<img class='svg-inject' src='/icons/github.svg'></span>"
   [[menu.main]]
     identifier = "linkedin"
     name = ""
     url = "https://www.linkedin.com/in/nikul-patel-048a47113/"
     weight = 6
-    pre = "<span data-feather='linkedin'></span>"
+    #pre = "<span data-feather='linkedin'></span>"
+    pre = "<img class='svg-inject' src='/icons/linkedin.svg'></span>"
+
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
 
 
 [params]
@@ -60,7 +71,6 @@ enableRobotsTXT = true
 
   # You can use this to inject any HTML in the <head> tag.
   # Ideal usecase for this is to import custom js/css or add your analytics snippet
-  customHeadHTML = ""
 
   # Keywords relevant for SEO
   metaKeywords = ["blog", "gokarna", "hugo"]
@@ -68,10 +78,54 @@ enableRobotsTXT = true
   # If you want to display posts on the homepage, the options are
   # "popular" (order posts by weight), "recent" (order posts by date)
   # or "" (do not display, default option)
-  showPostsOnHomePage = ""
+  showPostsOnHomePage = "recent"
 
   # Footer text
   footer = "I always do that, get into something and see how far I can go. ― Richard P. Feynman, Surely You're Joking, Mr. Feynman!"
-  copyright = ""
 
-  favicon = "favicon.ico"
+  socialIcons = [
+    {name = "linkedin", url = "https://www.linkedin.com/in/nikul-patel-048a47113/"},
+    {name = "github", url = "https://github.com/nikulpatel462"},
+    {name = "email", url = "mailto:example@example.com"}
+  ]
+
+  customHeadHTML = """
+  <link rel="stylesheet" type="text/css" href="/css/bam.css">
+    <script src='/js/bam.js'></script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+                   var demo1 = new BVAmbient({
+            selector: "#ambient",
+            fps: 60,
+            max_transition_speed: 12000,
+            min_transition_speed: 8000,
+            particle_number: 30,
+            particle_maxwidth: 60,
+            particle_minwidth: 10,
+            particle_radius: 50,
+            particle_opacity: true,
+            particle_colision_change: false,
+            particle_background: "#58c70c",
+            particle_image: {
+              image: false,
+              src: ""
+            },
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    particle_number: "15"
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    particle_number: "10"
+                  }
+                }
+            ]
+          });
+    });
+  </script>
+   <div id="ambient"></div>
+
+  """
