@@ -6,17 +6,16 @@ weight = 1
 rtl = false
 
 title = "Nikul Patel's Website"
-# logo = "img/logo.png"
+logo = "img/knight.png"
 description = "My awesome website"
-# copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2 January 2006"
 
 [author]
   name = "Nikul Patel"
-  image = "img/blowfish_logo.png"
-  headline = "I'm only human"
-  bio = "A little bit about you"
+  #image = "img/knight.png"
+  headline = "If you cannot explain something in simple terms, you don't understand it. - Richard P. Feynmann"
+  bio = "Math major turned programmer"
   links = [
     { email = "mailto:hello@your_domain.com" },
     { github = "https://github.com/nikulpatel462" },

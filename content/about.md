@@ -3,15 +3,26 @@ title: "About"
 date: 2022-10-05T16:44:21+01:00
 ---
 
-## About Me!
-I am currently working as a `Risk Analyst` at a Hedge Fund in London, though I spend most of my time coding. Please see my [CV]("Nikul_Patel_CV.pdf") for more details.
+Welcome to my website!
+
+# About Me
+
+I am currently working as a `Risk Analyst` at a Hedge Fund in London, though I spend most of my time coding. Please see my [CV](/files/nikul_patel_cv.pdf) for more details.
 
 
 ## About the Website
 
-Welcome to my website! I built it using [HUGO](https://gohugo.io/) and deployed it using [Netlify](https://www.netlify.com/).
+### Why It Exists
 
-I intend to use it for sharing useful resources about things I'm interested in and documenting my projects. Writing things up formally helps me to consolidate things I'm working on, and who doesn't want that!
+I build this website to share resources for things I'm interested in (see the [Recources](/resources) tab) and to document things I'm working on (see the [Projects](/projects) tab).
+
+
+
+
+
+### It looks cool, how did you make it?
+I built this using [HUGO](https://gohugo.io/) and deployed it using [Github Pages](https://docs.github.com/en/pages). See [here](/projects/this_website) for more details.
+
 
 
 
