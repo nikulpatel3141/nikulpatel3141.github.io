@@ -5,7 +5,7 @@ isoCode = "en"
 weight = 1
 rtl = false
 
-title = "Nikul Patel's Website"
+title = "Nikul Patel's Blog"
 logo = "img/knight.png"
 description = "My awesome website"
 
@@ -13,7 +13,7 @@ dateFormat = "2 January 2006"
 
 [author]
   name = "Nikul Patel"
-  #image = "img/knight.png"
+  #image = "img/knight_large.png"
   headline = "If you cannot explain something in simple terms, you don't understand it. - Richard P. Feynmann"
   bio = "Math major turned programmer"
   links = [
