@@ -26,11 +26,11 @@
   url = "/projects"
   weight = 2
 
-[[main]]
-  identifier = "cv"
-  name = "CV"
-  url = "/files/Nikul_Patel_CV.pdf"
-  weight = 4
+#[[main]]
+#  identifier = "cv"
+#  name = "CV"
+#  url = "/files/Nikul_Patel_CV.pdf"
+#  weight = 4
 [[main]]
   identifier = "github"
   name = ""
