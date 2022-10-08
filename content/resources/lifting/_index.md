@@ -1,5 +1,4 @@
 ---
-title: Lifting resources
-description: "Some caption"
+title: Weight Training Resources
 ---
-Some text will show?
+

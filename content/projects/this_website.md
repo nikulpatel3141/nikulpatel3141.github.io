@@ -4,7 +4,30 @@ date: 2022-10-08T11:12:10+01:00
 description: "How I built this website"
 ---
 
-# 
+# How this was Built
+
+## Frameworks
+
+The website is built using [HUGO](https://gohugo.io/), a static site generator written in [Go](https://go.dev/). Hugo has a few features I like:
+
+- Content is written in plain `markdown`
+- It is easy to install and deploy
+- *Lots* of pre-built [themes](https://themes.gohugo.io/) are available
+  - (I am using the [Blowfish](https://github.com/nunocoracao/blowfish) theme here)
+- It is highly extensible
+  - You can modify themes
+  - When `markdown` falls short you can use Hugo [Shortcodes](https://gohugo.io/content-management/shortcodes/)
 
 
-Presenting something to an audience is a good test to see if you really understand it (see the Feynmann quote on the homepage). I hope by creating posts on this website I'll gain a better understanding of things I'm working on (whether anyone will actually read the posts is another question ...).
+## Deployment
+
+I am also using a [CI pipeline](https://github.com/peaceiris/actions-gh-pages) to automatically deploy this website.
+
+
+# Why this was Built
+
+Here are my three main motivations for building this website:
+1) By formally presenting topics to an audience I can truly gauge my understanding of it (see the Feynmann quote on the homepage).
+    - (whether anyone will actually read the posts is another question ...).
+2) I can showcase the things I'm working on.
+3) For fun! I enjoy learning things, and I've learned a lot so far about web development from building this website so far.

@@ -1,5 +1,6 @@
 ---
-title: "Coffee resource page"
+title: "Coffee"
 hideReadMore: true
-type: "page"
 ---
+
+I am a big fan of Coffee.
