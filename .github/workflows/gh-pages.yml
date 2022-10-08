@@ -35,5 +35,5 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: nikulpatel462/nikulpatel462.github.io
+          external_repository: nikulpatel3141/nikulpatel3141.github.io
           publish_dir: ./public
