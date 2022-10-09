@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 [author]
   name = "Nikul Patel"
   #image = "img/knight_large.png"
-  headline = "If you cannot explain something in simple terms, you don't understand it. - Richard P. Feynmann"
+  headline = "I hope someone finds this useful."
   bio = "Math major turned programmer"
   links = [
     { email = "mailto:hello@your_domain.com" },
