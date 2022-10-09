@@ -21,13 +21,17 @@ The website is built using [HUGO](https://gohugo.io/), a static site generator w
 
 ## Deployment
 
-I am also using a [CI pipeline](https://github.com/peaceiris/actions-gh-pages) to automatically deploy this website.
+I am also using a CI pipeline to automatically deploy this website.
+
+See this page for more details: `https://github.com/peaceiris/actions-gh-pages`
 
 
 # Why this was Built
 
 Here are my three main motivations for building this website:
-1) By formally presenting topics to an audience I can truly gauge my understanding of it (see the Feynmann quote on the homepage).
-    - (whether anyone will actually read the posts is another question ...).
+1) By formally presenting a topic I can truly gauge my understanding of it.
+    - This quote summarises the idea well:
+      > If you cannot explain something in simple terms, you don't understand it.
+      > <cite>Richard P. Feynmann</cite>
 2) I can showcase the things I'm working on.
-3) For fun! I enjoy learning things, and I've learned a lot so far about web development from building this website so far.
+3) For fun! I enjoy learning things, and I've learned a lot about web development from building this website so far.
