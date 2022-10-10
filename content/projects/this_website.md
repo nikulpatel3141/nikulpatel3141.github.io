@@ -21,14 +21,14 @@ The website is built using [HUGO](https://gohugo.io/), a static site generator w
 
 ## Deployment
 
-I am also using a CI pipeline to automatically deploy this website.
+I'm using a CI pipeline to automatically deploy this website.
 
 See this page for more details: `https://github.com/peaceiris/actions-gh-pages`
 
 
 # Why this was Built
 
-Here are my three main motivations for building this website:
+Here are my main motivations for building this website:
 1) By formally presenting a topic I can truly gauge my understanding of it.
     - This quote summarises the idea well:
       > If you cannot explain something in simple terms, you don't understand it.

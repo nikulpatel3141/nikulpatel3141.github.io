@@ -13,11 +13,11 @@ dateFormat = "2 January 2006"
 
 [author]
   name = "Nikul Patel"
-  #image = "img/knight_large.png"
+  #image = "img/london_bridge.jpg"
   headline = "I hope someone finds this useful."
   bio = "Math major turned programmer"
   links = [
-    { email = "mailto:hello@your_domain.com" },
+    { email = "mailto:nikulp3141@gmail.com" },
     { github = "https://github.com/nikulpatel462" },
     { linkedin = "https://www.linkedin.com/in/nikul-patel-048a47113/" },
   ]
