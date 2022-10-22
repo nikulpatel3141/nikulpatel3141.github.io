@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 [author]
   name = "Nikul Patel"
   #image = "img/london_bridge.jpg"
-  headline = "I hope someone finds this useful."
+  headline = ""
   bio = "Math major turned programmer"
   links = [
     { email = "mailto:nikulp3141@gmail.com" },
