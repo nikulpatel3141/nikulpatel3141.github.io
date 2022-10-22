@@ -1,3 +1,5 @@
+// static/quotes.js
+
 const fileName = "/quotes.csv";
 const delim = "|";
 
@@ -11,29 +13,27 @@ fetch(fileName)
     return response.text();
   })
   .then(function (csv) {
-    getRandomQuote(csv);
+    return getRandomQuote(csv);
+  })
+  .then(function (quote) {
+    setQuote(quote);
   });
-
-function toTitleCase(str) {
-  return str.replace(/\w\S*/g, function (txt) {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
-}
 
 async function getRandomQuote(data) {
   const readMe = data.split(/\r?\n/);
   const lineCount = readMe.length;
   const randomLineNumber = Math.floor(Math.random() * lineCount);
-  const randomLine = readMe[randomLineNumber].split(delim); // quote|author|work
+  return readMe[randomLineNumber];
+}
 
-  let author = randomLine[1];
-  let work = randomLine[2];
+function setQuote(line) {
+  let [quote, author, work] = line.split(delim);
 
   if (work) {
     author += ", ";
   }
 
-  randomQuote.innerText = randomLine[0];
+  randomQuote.innerText = quote;
   randomAuthor.innerText = author;
   randomWork.innerText = work;
 }
