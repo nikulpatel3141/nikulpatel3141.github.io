@@ -65,4 +65,10 @@ Below you can see how this is implemented in the theme itself. This makes the se
 
 ## TODO
 
+### ThreeJS
+
+VantaJS is based on another JS library [ThreeJS](https://threejs.org/) which makes it easy to create 3D rendered scenes. I would like to create my own animation instead of using a pre-built one.
+
+### High CPU Usage
+
 The CPU usage is quite high for this animation by default since there are many birds and calls to `window.requestAnimationFrame()`. There are probably workarounds for this, eg limit the number of birds/animations per second.
