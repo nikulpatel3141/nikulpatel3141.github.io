@@ -17,15 +17,19 @@ I found [this](https://cborchers.com/2020/12/08/how-to-include-javascript-in-you
 2. Write an accompanying shortcode and save it to `layouts/shortcodes/`
 3. Add it to your `.md` files
 
-## The JavaScript
+## JavaScript
 
 Here is the script I wrote to select a random quote and format it:
 
 
 {{% code file="/static/js/quotes.js" language="js" %}}
 
+### Typing Animation
 
-## The HTML/Shortcode
+I added the typing animation using [typed.js](https://github.com/mattboldt/typed.js/).
+
+
+## HTML/Hugo Shortcode
 
 This is used via `{{ < random_quote > }}` in my `content/_index.md` file for the homepage:
 
@@ -34,7 +38,7 @@ This is used via `{{ < random_quote > }}` in my `content/_index.md` file for the
 
 ## Filtering Quotes
 
-Some of the quotes on Goodreads are *really* long, so I filtered out for the short ones using this bash one-liner:
+Some of the quotes on Goodreads are *really* long, so I filtered out for the short ones using `awk`:
 
 ```bash
 $ awk '{if (length($0) < 100) print }' inspirational_quotes.csv >> quotes.csv
