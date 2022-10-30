@@ -33,7 +33,14 @@ function setQuote(line) {
     author += ", ";
   }
 
-  randomQuote.innerText = quote;
+  var options = {
+    strings: [quote],
+    stringsElement: "randomQuote",
+    typeSpeed: 5
+  };
+
+  var typed = new Typed('#randomQuote', options);
+
   randomAuthor.innerText = author;
   randomWork.innerText = work;
 }
