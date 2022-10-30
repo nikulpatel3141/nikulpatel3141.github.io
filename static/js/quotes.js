@@ -36,7 +36,7 @@ function setQuote(line) {
   var options = {
     strings: [quote],
     stringsElement: "randomQuote",
-    typeSpeed: 5
+    typeSpeed: 20
   };
 
   var typed = new Typed('#randomQuote', options);
