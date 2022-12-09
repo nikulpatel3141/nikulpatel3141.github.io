@@ -19,8 +19,8 @@ Please contact me via LinkedIn/Email (details on the homepage) if you'd like to 
 ## Why It Exists
 
 I build this website to:
-- Share resources for things I'm interested in ([Recources](/resources)).
-- Document things I'm working on ([Projects](/projects)).
+- Share [Resources](/resources) for things I'm interested in.
+- Document [Projects](/projects) I'm working on.
 
 
 ## It looks cool, how did you make it?
