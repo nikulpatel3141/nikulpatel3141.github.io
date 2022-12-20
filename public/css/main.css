@@ -1,0 +1,40 @@
+:root {
+  --content-width: 1120px;
+  --container-width: 810px;
+
+  --light-primary-color: 255, 255, 255;
+  --light-secondary-color: #dddddd;
+  --light-tertiary-color: #272822;
+  --light-text-color: black;
+}
+
+@font-face {
+  font-family: IBMPlexMono;
+  font-weight: 400;
+  src: url("/fonts/IBMPlexMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: IBMPlexMono;
+  font-weight: 700;
+  src: url("/fonts/IBMPlexMono-Bold.ttf");
+}
+
+html {
+  background-color: rgb(var(--light-primary-color));
+  color: var(--light-text-color);
+  font-family: "IBMPlexMono";
+  font-size: 17.5px;
+  min-height: 100%;
+  position: relative;
+}
+
+#posreturn {
+  color: blue !important;
+  background-color: blue;
+}
+
+#negreturn {
+  color: red !important;
+}
+

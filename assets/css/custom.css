@@ -22,7 +22,7 @@ html {
   height: 100%;
   top: 0px;
   left: 0px;
-    background-size: cover;
+  background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -31,3 +31,14 @@ html {
   display: inline;
 }
 
+#posreturn {
+  color: green;
+  background-color: lightgreen;
+  opacity: 0.8;
+}
+
+#negreturn {
+  color: red;
+  background-color: #ffaca6;
+  opacity: 0.8;
+}

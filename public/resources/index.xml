@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resources on Nikul Patel&#39;s Blog</title>
+    <link>/resources/</link>
+    <description>Recent content in Resources on Nikul Patel&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 07 Oct 2022 10:40:54 +0100</lastBuildDate><atom:link href="/resources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Books</title>
+      <link>/resources/books/</link>
+      <pubDate>Thu, 06 Oct 2022 16:50:35 +0100</pubDate>
+      
+      <guid>/resources/books/</guid>
+      <description>Coming soon &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>/resources/programming/</link>
+      <pubDate>Wed, 05 Oct 2022 22:09:07 +0100</pubDate>
+      
+      <guid>/resources/programming/</guid>
+      <description>Programming&gt; Programming # There are many great programming resources online, but here&amp;rsquo;s a few I found useful.
+General&gt; General # A good piece of advice I&amp;rsquo;ve come across for learning language syntax quickly is to have your own Hello, World!</description>
+    </item>
+    
+    <item>
+      <title>Coffee</title>
+      <link>/resources/coffee/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/resources/coffee/</guid>
+      <description>Resources for coffee? Yes!
+There&amp;rsquo;s another world beyond instant coffee and Starbucks. There&amp;rsquo;s nothing wrong with these if that&amp;rsquo;s what you like, though you&amp;rsquo;re missing out if you haven&amp;rsquo;t experienced anything else.</description>
+    </item>
+    
+    <item>
+      <title>Gym</title>
+      <link>/resources/lifting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/resources/lifting/</guid>
+      <description>I enjoy going to the gym and I used to compete in powerlifting. Finding accurate and useful information on fitness (specifically bodybuilding) is difficult, so I&amp;rsquo;m sharing some resources I&amp;rsquo;ve found to be useful.</description>
+    </item>
+    
+  </channel>
+</rss>
