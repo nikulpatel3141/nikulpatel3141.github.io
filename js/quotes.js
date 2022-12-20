@@ -22,7 +22,9 @@ fetch(fileName)
 async function getRandomQuote(data) {
   const readMe = data.split(/\r?\n/);
   const lineCount = readMe.length;
-  const randomLineNumber = Math.floor(Math.random() * lineCount);
+  var dtNow = new Date();
+  var intDay = Math.floor(dtNow.getTime() / 86400000);
+  const randomLineNumber = intDay % lineCount;
   return readMe[randomLineNumber];
 }
 

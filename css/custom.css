@@ -1,9 +1,0 @@
-@font-face {
-  font-family: IBMPlexMono;
-  font-weight: 400;
-  src: url("/fonts/IBMPlexMono-Regular.ttf");
-}
-
-html {
-  font-family: "IBMPlexMono";
-}
