@@ -8,6 +8,8 @@ description: ""
 
 The banner above for financial index returns (FTSE100, ...) is generated using data from FT and scraped using GitHub Actions.
 
+My scraper code is [here](https://github.com/nikulpatel3141/FT-Scraper). There are two versions of the script, one in Python and another in Go.
+
 ## Scraping
 
 I found the endpoint FT was using to query for data in their market data banner using Chrome's devtools:
