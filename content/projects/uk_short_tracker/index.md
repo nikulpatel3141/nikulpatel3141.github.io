@@ -27,6 +27,23 @@ It displays various metrics for the short positions from the lookback date to th
 - Days to Cover: The number of days it will take to fully liquidate the position at 100% trading volume
   - For simplicity I've used a 22 day average as an estimate the trading volume
 
+### Context
+
+Here's some background behind the metrics calculations:
+
+- Lookback of 5 days:
+  - Typically the funds disclosing shorts won't be actively trading in and out positions due to slippage concerns
+  - I'd expect any trading that happens will take place over a few days
+    - justified by the DTC column - most are >1 day
+  - Hence, a lookback period of >1 day makes sense
+- Days to cover:
+  - A useful metric since if this is large and shorts perform badly, it's difficult to exit the position
+    - See this page on [short squeezes](https://www.investopedia.com/terms/s/shortsqueeze.asp#:~:text=A%20short%20squeeze%20happens%20when,demonstrate%20a%20strong%20short%20interest.) for more information
+- PnL:
+  - A lot of these funds are long-short meaning they will have a long position in a security for these short positions
+  - Hence PnL relative to a benchmark might be more useful than raw PnL
+  - In the original code I included PnL relative to VUKE (a FTSE100 ETF), however the results table didn't render properly so I have excluded it for now
+
 ## Disclaimer
 The information on this page is provided for information only and should not be constituted as investment advice.
 I don't provide any warranty as to the accuracy of the information on this site and it should not be relied upon in any way.
