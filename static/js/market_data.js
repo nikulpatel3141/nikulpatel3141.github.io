@@ -1,7 +1,7 @@
 const marketDataURL = "https://raw.githubusercontent.com/nikulpatel3141/FT-Scraper/master/output.json"
 const dataLine  = document.getElementById("marketData");
 const dataBarStyle = "flex flex-1 items-center justify-between py-1 text-sm"
-const sourceHTML = `(Source: <a href="https://www.ft.com">FT</a>)`
+const sourceHTML = `(Source: <a href="https://www.ft.com">FT</a>, delayed)`
 
 async function getMarketData(){
   return fetch(marketDataURL)
