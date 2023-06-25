@@ -7,10 +7,6 @@ Welcome to my website!
 
 # About Me
 
-## What I do
-
-I am currently working as a `Risk Analyst` at a Hedge Fund in London, though I spend most of my time coding. Reach out to me for more details.
-
 ## Getting in Touch
 Please contact me via LinkedIn/Email (details on the homepage) if you'd like to get in touch.
 
@@ -29,4 +25,3 @@ I built this using [HUGO](https://gohugo.io/) and deployed it using [Github Page
 
 The views and opinions expressed on this website are my own and do not reflect those of my employers, past or present.
 
-Any content is not intended to malign any religion, ethnic group, club, organization, company, individual or anyone or anything.

@@ -25,6 +25,11 @@
   name = "Projects"
   url = "/projects"
   weight = 2
+[[main]]
+  identifier = "book_reviews"
+  name = "Book Reviews"
+  url = "/book_reviews"
+  weight = 2
 
 #[[main]]
 #  identifier = "cv"
