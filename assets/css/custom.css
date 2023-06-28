@@ -1,8 +1,8 @@
 
-
 @font-face {
   font-family: "Raleway";
   src: url("fonts/Raleway-VariableFont_wght.ttf");
+  font-variation-settings: "wght" 500;
 }
 
 
@@ -11,18 +11,13 @@ html {
   font-weight: 500;
 }
 
+
+body {
+  background-size: 40px 40px;
+  background-image: radial-gradient(rgb(100, 100, 100) 2%, transparent 0);
+}
+
 #randomQuote {
   display: inline;
 }
 
-#posreturn {
-  color: green;
-  background-color: lightgreen;
-  opacity: 0.8;
-}
-
-#negreturn {
-  color: red;
-  background-color: #ffaca6;
-  opacity: 0.8;
-}
