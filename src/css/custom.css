@@ -28,3 +28,27 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/*
+@font-face {
+  font-family: "Raleway";
+  src: url("fonts/Raleway-VariableFont_wght.ttf");
+  font-variation-settings: "wght" 500;
+}
+
+html {
+  font-family: "Raleway";
+  font-weight: 500;
+}
+*/
+
+body {
+  background-size: 40px 40px;
+  background-image: radial-gradient(rgb(100, 100, 100) 2%, transparent 0);
+}
+
+#randomQuote {
+  display: inline;
+}
+
+
