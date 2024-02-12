@@ -5,10 +5,13 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: "Nikul's Website",
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/nikulpatel3141',
+				linkedin: 'https://github.com/nikulpatel3141',
 			},
+			logo: { src: './src/assets/img/knight.svg' },
+			favicon: './src/assets/img/favicon.ico',
 			sidebar: [
 				{
 					label: 'Guides',
