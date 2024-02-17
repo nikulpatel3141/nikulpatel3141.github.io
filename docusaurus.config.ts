@@ -34,6 +34,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: "/",
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -46,6 +47,12 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
+        pages: {
+          path: 'src/pages',
+          routeBasePath: '/home',
+
+          // ... configuration object here
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -74,16 +81,14 @@ const config: Config = {
         { to: '/home', label: '🏡Home', position: 'right' },
         {
           href: 'https://github.com/nikulpatel3141',
-          label: 'GitHub',
           position: 'right',
-          className: 'header-github-link',
+          className: 'header-github-link header-link',
           'aria-label': 'GitHub repository',
         },
         {
           href: 'https://www.linkedin.com/in/nikul-patel-048a47113',
-          label: 'LinkedIn',
           position: 'right',
-          className: 'header-linkedin-link',
+          className: 'header-linkedin-link header-link',
           'aria-label': 'LinkedIn Profile',
         },
       ],

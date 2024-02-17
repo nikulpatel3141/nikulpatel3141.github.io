@@ -1,0 +1,8 @@
+{
+  "label": "Book Reviews",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Reviews of books I've read."
+  }
+}
