@@ -29,6 +29,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  scripts: [
+    {src: "/js/flow_tracker.js", defer: false},
+  ],
+
   presets: [
     [
       'classic',
