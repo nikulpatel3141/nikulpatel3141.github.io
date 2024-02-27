@@ -1,0 +1,37 @@
+---
+title: "Dotfiles"
+date: 2022-12-10T22:11:21Z
+description: "Config for Neovim and Fish"
+---
+
+# Dotfiles
+
+[Here](https://github.com/nikulpatel3141/dotfiles) are my configuration files for various tools ([Fish Shell](https://fishshell.com/), [Helix](https://helix-editor.com/)) I use.
+
+
+## Setup
+
+I've made it easy to install and set up the tools I use from scratch, eg for `apt` based Linux distros:
+
+```bash
+cd ~
+
+git clone https://github.com/nikulpatel3141/dotfiles
+
+cd dotfiles/scripts
+
+bash install_apt_pachages.sh  # install fish shell, g++, ... etc using apt
+
+bash install_brew_pachages.sh  # installs homebrew
+bash install_brew_pachages.sh  # installs homebrew packages
+
+cd ..
+
+# set up symlinks for the dotfiles
+stow fish/
+stow helix/
+# ...
+
+```
+
+[GNU Stow](https://www.gnu.org/software/stow/) is a lightweight symlink manager.

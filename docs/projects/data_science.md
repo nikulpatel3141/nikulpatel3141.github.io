@@ -13,6 +13,3 @@ Below are links to various Data Science projects I've done over the past few yea
 | ONS Housing Data | Use publicly available data from the ONS to investigate what drives rental yields | [Link](https://github.com/nikulpatel3141/ONS-Housing-Data) |
 | Car Dataset Exploration | Finding ways to suitably interpolate missing data on this dataset about vehicles | [Link](https://github.com/nikulpatel3141/Car-Dataset-Exploration) |
 
-
-_(Note: I only recently pushed these so some of the commit timestamps are inaccurate.)_
-

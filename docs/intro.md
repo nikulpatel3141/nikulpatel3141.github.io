@@ -7,20 +7,18 @@ slug: /
 
 Hi, welcome to my website!
 
-## About
+# About
 
-about ...
+I build this website to learn more about web development and to share things I'm interested in/working on.
 
+## It looks cool, how did you make it?
+I am migrating this website from Hugo to Docusaurus because I want to improve my JavaScript skills and learn how to use React.
 
-Run the development server:
+~I built this using [HUGO](https://gohugo.io/) and deployed it using [Github Pages](https://docs.github.com/en/pages). See [here](/projects/this_website) for more details.~
 
-```bash
-cd my-website
-npm run start
-```
+## Getting in Touch
+Contact me via LinkedIn/Email (details on the homepage) if you'd like to get in touch.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Disclaimer
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+The views and opinions expressed on this website are my own and do not reflect those of my employers, past or present.

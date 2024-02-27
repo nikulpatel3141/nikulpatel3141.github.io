@@ -30,7 +30,8 @@ const config: Config = {
   },
 
   scripts: [
-    {src: "/js/flow_tracker.js", defer: false},
+    {src: "/js/flow_tracker.js", defer: true},
+    {src: "/js/quotes.js", defer: true},
   ],
 
   presets: [
@@ -124,6 +125,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.nightOwl,
+      additionalLanguages: ['bash', 'python'],
     },
   } satisfies Preset.ThemeConfig,
 };
