@@ -31,7 +31,6 @@ const config: Config = {
 
   scripts: [
     {src: "/js/flow_tracker.js", defer: true},
-    {src: "/js/quotes.js", defer: true},
   ],
 
   presets: [

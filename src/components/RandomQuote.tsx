@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ReactTyped } from "react-typed";
 
 const fileName = "/quotes.csv";
 const delim = "|";
@@ -20,15 +21,34 @@ async function getRandomQuote() {
         .then(_getRandomQuote);
 }
 
+function parseQuote(line) {
+    if (line === undefined) return ["", ""];
+
+    let [quote, author, work] = line.split(delim);
+  
+    if (work) {
+      author += ", ";
+    }    
+    return [quote, author];
+  }
+  
+
+
 function RandomQuote(props) {
     const [data, setData] = useState();
 
-    useEffect({
+    useEffect(async () => {
         const quote = await getRandomQuote();
-        setData(quote);
+        setData({quote: quote});
     }, []);
     
-    return <div>{quote}</div>;
+    const [quote, author] = parseQuote(data?.quote);
+
+    return (
+    <blockquote>
+        <ReactTyped strings={[quote]}></ReactTyped>
+        <div><i>- {author}</i></div>
+    </blockquote>)
 }
 
 export default RandomQuote;
