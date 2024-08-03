@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import RandomQuote from '/src/components/RandomQuote';
 
 type FeatureItem = {
   title: string;
@@ -64,6 +65,7 @@ export default function HomepageFeatures(): JSX.Element {
             <Feature key={idx} {...props} />
           ))}
         </div>
+        <RandomQuote />
       </div>
     </section>
   );

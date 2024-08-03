@@ -22,32 +22,34 @@ async function getRandomQuote() {
 }
 
 function parseQuote(line) {
-    if (line === undefined) return ["", ""];
+    if (line == null) return ["", ""];
 
     let [quote, author, work] = line.split(delim);
   
     if (work) {
       author += ", ";
     }    
-    return [quote, author];
+    return {quote, author};
   }
   
 
 
-function RandomQuote(props) {
-    const [data, setData] = useState();
-
-    useEffect(async () => {
-        const quote = await getRandomQuote();
-        setData({quote: quote});
-    }, []);
+function RandomQuote() {
+    const [parsedQuote, setParsedQuote] = useState(null);
     
-    const [quote, author] = parseQuote(data?.quote);
+    useEffect(() => {
+        const fetchQuote = async () => {
+            const quote_str = await getRandomQuote();
+            const parsedQuote_ = parseQuote(quote_str);
+            setParsedQuote(parsedQuote_);
+        };
+        fetchQuote();
+    }, []);
 
     return (
     <blockquote>
-        <ReactTyped strings={[quote]}></ReactTyped>
-        <div><i>- {author}</i></div>
+        <ReactTyped strings={[parsedQuote?.quote ?? '']}></ReactTyped>
+        <div><i>- {parsedQuote?.author ?? ''}</i></div>
     </blockquote>)
 }
 

@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { Icon } from '@fortawesome/fontawesome-svg-core';
 
 const config: Config = {
   title: 'Nikul Patel',
@@ -82,7 +83,7 @@ const config: Config = {
           label: 'Wiki',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
-        { to: '/home', label: '🏡Home', position: 'right' },
+        { to: '/home', position: 'right', className: 'header-home-link header-link'},
         {
           href: 'https://github.com/nikulpatel3141',
           position: 'right',
