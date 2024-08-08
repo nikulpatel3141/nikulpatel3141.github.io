@@ -110,17 +110,8 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'Contact',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/nikulpatel3141',
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nikul's Project, built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Nikul Patel, built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
