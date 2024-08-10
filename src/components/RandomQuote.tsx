@@ -4,8 +4,6 @@ import { ReactTyped } from "react-typed";
 const fileName = "/quotes.csv";
 const delim = "|";
 
-const reader = new FileReader();
-
 async function _getRandomQuote(data) {
     const readMe = data.split(/\r?\n/);
     const lineCount = readMe.length;
@@ -36,7 +34,6 @@ function parseQuote(line) {
 
 function RandomQuote() {
     const [parsedQuote, setParsedQuote] = useState(null);
-    
     useEffect(() => {
         const fetchQuote = async () => {
             const quote_str = await getRandomQuote();
