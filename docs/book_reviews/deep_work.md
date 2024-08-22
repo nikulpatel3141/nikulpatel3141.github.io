@@ -1,11 +1,10 @@
 ---
-title: "Deep Work (Cal Newport)"
+title: "Deep Work"
 date: 2023-06-25T17:41:40+01:00
 description: ""
 draft: false
 tags: [productivity]
 author: "Cal Newport"
-rating: 7
 ---
 
 # Overview
@@ -25,15 +24,10 @@ The anecdotes Newport presents book are convincing and the tips are practical al
     - Shallow work is common and produces little of value
     - Deep work is rare and often produces high quality work
 2. You should get used to being bored more often
-    - Being distracted (on your phone, ...) decreases your ability to focus
-3. Be intentional with your time and how you spend it. Consistent high quality work doesn't happen by accident.
+    - Being distracted (checking social media, etc) decreases your ability to focus
+3. Be intentional with how you spend your time. Consistent high quality work doesn't happen by accident.
 
 
 # Summary
 
-Newport makes the point that people who can:
-
-1. learn new things quickly
-2. produce high quality work quickly
-
-... will thrive in today's economy. 
+People who quickly learn new things and produce high quality work will thrive in today's economy, and these things are more easily done when pursuing "deep work".
