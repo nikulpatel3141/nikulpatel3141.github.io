@@ -2,16 +2,16 @@
 title: Gym
 ---
 
-I enjoy going to the gym and I used to compete in [powerlifting](https://en.wikipedia.org/wiki/Powerlifting). Finding accurate and useful information on fitness (specifically bodybuilding) is difficult, so I'm sharing some resources I've found to be useful.
+I enjoy going to the gym, and I competed (and was a Full Blue) in [Powerlifting](https://en.wikipedia.org/wiki/Powerlifting) at University.
+
+Finding accurate and useful information on fitness is difficult, so I'm sharing some resources I've found.
 
 ## Resources
 
-The best single resource *by far* I've found on hypertrophy training + nutrition is [Mike Israetel's Renaissance Periodization](https://www.youtube.com/c/RenaissancePeriodization).
-
-Another great resource is [Eugene Teo's YouTube channel](https://www.youtube.com/user/eugeism).
+- [Mike Israetel - Renaissance Periodization](https://www.youtube.com/c/RenaissancePeriodization)
+- [Eugene Teo](https://www.youtube.com/user/eugeism)
 
 
 ## Equipment
 
-If you do any pulling movements I highly recommend [Versa Gripps](https://www.versagripps.com/).
-
+- [Versa Gripps](https://www.versagripps.com/)

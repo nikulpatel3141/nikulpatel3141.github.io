@@ -5,25 +5,13 @@ date: 2022-10-05T22:09:07+01:00
 
 # Programming
 
-There are many great programming resources online, but here's a few I found useful.
+The best way to learn a programming language is to build something with it (for example I made this website to help me learn JavaScript).
 
-## General
+Here's a fun, informative video on learning to code: 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NtfbWkxJTHw?si=wzfjivbNibapDa7v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-A good piece of advice I've come across for learning language syntax quickly is to have your own `Hello, World!` program. This will be a short, somewhat complex program you're familiar with. For example,
+## Resources
 
-Here's a (fun) informative video on learning to code: youtube NtfbWkxJTHw
-
-## Python
-
-Here's what I started with: [Python Crash Course](https://nostarch.com/pythoncrashcourse2e).
-
-## C++
-
-I picked this up using: [C++ Primer](https://www.oreilly.com/library/view/c-primer-fifth/9780133053043/).
-
-## Go
-
-A good place to start is: [A Tour of Go](https://go.dev/tour/welcome/1).
-
-
-
+- Python - [Python Crash Course](https://nostarch.com/pythoncrashcourse2e)
+- C++ - [C++ Primer](https://www.oreilly.com/library/view/c-primer-fifth/9780133053043/)
+- Go - [A Tour of Go](https://go.dev/tour/welcome/1)

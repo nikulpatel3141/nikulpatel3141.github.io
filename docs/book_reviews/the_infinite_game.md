@@ -1,8 +1,8 @@
 ---
 title: "The Infinite Game"
-date: 2023-06-25T17:41:40+01:00
+date: 2024-08-23T21:09:22+01:00
 description: ""
-draft: true
+draft: false
 tags: [business]
 author: "Simon Sinek"
 ---
@@ -17,9 +17,12 @@ He discusses behaviour of organisations and individuals in the context of a neve
 
 > A Just Cause is a specific vision of a future state that does not yet exist; a future state so appealing that people are willing to make sacrifices in order to help advance toward that vision.
 
-I enjoyed this book as it gave me a perspective shift on how decisions should be made given we are all players in this ‘Infinite’ game. The goal is not to win as there are no winners in an Infinite game; the goal is to keep playing. 
+I enjoyed this book as it gave me a perspective shift on how decisions should be made given we are all players in this ‘Infinite’ game.
 
-I also enjoyed reading about companies (Apple, Costco, CVS) becoming successful over time by not only caring about the bottom line.
+> The goal is not to win as there are no winners in an Infinite game ... the goal is to keep playing. 
+
+
+I also enjoyed reading about companies (Apple, Costco, CVS) enjoying success while not only caring about the bottom line.
 
 ## Takeaways
 
@@ -37,6 +40,6 @@ You should actively look for others worthy of comparison who expose your weaknes
 
 Don't be stuck to particular ways of doing things. Notable examples Grant gives are:
 
-- Kodak: The company fell behind as the world switched to digital photography while Kodak stuck to film
+- Kodak: The company fell behind as the world switched to digital photography while Kodak stuck to film.
 
-- CVS: Stopping purchases of tobacco products in its stores caused a short term hit to revenues but it quickly gained the business of health conscious brands, helping it well surpass its previous results
+- CVS: Stopping purchases of tobacco products in its stores caused a short term hit to revenues but it gained the business of health conscious brands, helping it well surpass its previous results.
