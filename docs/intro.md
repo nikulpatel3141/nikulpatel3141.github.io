@@ -1,23 +1,25 @@
 ---
+title: "About"
 sidebar_position: 1
 slug: /
 ---
 
-# Nikul's Website
-
-Hi, welcome to my website!
 
 # About
 
-I build this website to learn more about web development and to share things I'm interested in/working on.
+Hi, welcome to my website!
 
-## It looks cool, how did you make it?
-I am migrating this website from Hugo to Docusaurus because I want to improve my JavaScript skills and learn how to use React.
 
-~I built this using [HUGO](https://gohugo.io/) and deployed it using [Github Pages](https://docs.github.com/en/pages). See [here](/projects/Programming/this_website) for more details.~
+## About This Website
+
+I build this website to learn more about web development and to share things I'm working on.
+
+This website is built using [Docusaurus](https://docusaurus.io/).
+
 
 ## Getting in Touch
-Contact me via LinkedIn/Email (details on the homepage) if you'd like to get in touch.
+
+Contact me via [Email](mailto:nikulp3141@gmail.com).
 
 ## Disclaimer
 
