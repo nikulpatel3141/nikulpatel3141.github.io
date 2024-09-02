@@ -1,17 +1,25 @@
 ---
 title: "UK Short Disclosure Tracker"
 date: 2023-01-02T17:24:21Z
-draft: false
 description: "Tracker for disclosed UK shorts on the FCA website"
 ---
 
+import { useEffect } from 'react';
+
+export const ShortLoader = () => {
+  useEffect(() => runGetShortData());
+  return <div></div>
+}
+
 Below is a monitor updated daily for tracking the top 10 individual and overall disclosed UK short positions.
 
+Note: this monitor no longer updates as the Yahoo Finance API is no longer available
+
 ## Top Overall Shorts
-<div class="text-xs" id="secShortTracker"></div>
+<div id='secShortTracker'></div>
 
 ## Top Individual Shorts
-<div class="text-xs" id="fundShortTracker"></div>
+<div id='fundShortTracker'></div>
 
 ## Code
 The code to generate this report is on my GitHub page [here](https://github.com/nikulpatel3141/UK-Short-Tracker), along with a README to explain how it works.
@@ -51,9 +59,10 @@ I don't provide any warranty as to the accuracy of the information on this site 
 ## Sources
 I'm using data from Yahoo Finance, OpenFIGI and FCA to produce this report.
 
-Yahoo Finance: https://uk.finance.yahoo.com/
-FCA: https://www.fca.org.uk/markets/short-selling/notification-disclosure-net-short-positions
-OpenFIGI: https://www.openfigi.com/
+- Yahoo Finance: https://uk.finance.yahoo.com/
+- FCA: https://www.fca.org.uk/markets/short-selling/notification-disclosure-net-short-positions
+- OpenFIGI: https://www.openfigi.com/
 
 <script src="/js/short_tracker.js"></script>
+<ShortLoader/>
 

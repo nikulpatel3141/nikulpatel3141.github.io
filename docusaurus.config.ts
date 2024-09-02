@@ -31,6 +31,7 @@ const config: Config = {
 
   scripts: [
     {src: "/js/flow_tracker.js", defer: true},
+    {src: "/js/short_tracker.js", defer: true},
   ],
 
   presets: [
