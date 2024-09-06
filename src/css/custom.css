@@ -46,7 +46,7 @@ div.navbar__logo img {
   transition: transform 0.5s;
 }
 
-div.navbar__logo img:hover {
+.navbar__brand:hover img {
   transform: rotateY(180deg);
 }
 
