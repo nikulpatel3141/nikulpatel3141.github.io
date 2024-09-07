@@ -2,10 +2,7 @@
 title: "Coffee"
 ---
 
-
-## Coffee Shops
-
-Here's a list of coffee shops I've visited and would recommend if you'd like to experience great coffee:
+Here's a list of coffee shops I'd recommend for great coffee:
 
 ### London
 

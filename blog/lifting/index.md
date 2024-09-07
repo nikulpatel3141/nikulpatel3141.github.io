@@ -2,9 +2,9 @@
 title: Gym
 ---
 
-I enjoy going to the gym, and I competed (and was a Full Blue) in [Powerlifting](https://en.wikipedia.org/wiki/Powerlifting) at University.
+I enjoy going to the gym, and I competed (and was a Full Blue!) in [Powerlifting](https://en.wikipedia.org/wiki/Powerlifting) at University.
 
-Finding accurate and useful information on fitness is difficult, so I'm sharing some resources I've found.
+Finding accurate and useful information on fitness is difficult, so I'm sharing some resources I've found useful.
 
 ## Resources
 
