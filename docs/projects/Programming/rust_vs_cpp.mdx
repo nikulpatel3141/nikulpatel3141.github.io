@@ -2,20 +2,19 @@
 title: "Rust vs C++"
 date: 2024-09-08T20:46:07+01:00
 description: "Comparing Rust and CPP in Python"
-draft: true
 ---
 
 Many popular Python projects are using Rust, eg: [Polars](https://github.com/pola-rs/polars), [Pydantic](https://github.com/pydantic/pydantic), [uv, ruff, rye](https://github.com/astral-sh), [orjson](https://github.com/ijl/orjson).
 
-I couldn't find as many using C++, so I wanted to investigate using both Rust and C++ from Python.
+I couldn't find as many using C++, so I wanted to investigate using Rust and C++ from Python.
 
 I'll use [pybind11](https://pybind11.readthedocs.io/en/stable/index.html#) for C++ and [PyO3](https://github.com/PyO3/pyo3) for Rust. The associated source code is [here](https://github.com/nikulpatel3141/MandelbrotPyRsCpp).
 
 ### Why Bother
 
-Rust and C++ are generally faster than Python but have to be compiled and usually require more effort to write. Therefore being able to call Rust or C++ code allows for faster code without the associated downsides.
+Rust and C++ are generally faster than Python but are compiled and usually harder to write. Therefore being able to call Rust or C++ code allows for better performance without the associated downsides.
 
-Other advantages of C++ and Rust include being strongly typed and parallelism (Python's [GIL](https://realpython.com/python-gil/) doesn't limit parallelism in C++ and Rust extension libraries).
+Other advantages of C++ and Rust include being strongly typed and parallelism (Python's [GIL](https://realpython.com/python-gil/) doesn't limit C++/Rust extensions).
 
 
 ## Installation
@@ -41,7 +40,7 @@ The easiest way to install is via `pip`:
 $ pip install pybind11
 ```
 
-Adding to your Python build system is harder than with Rust as you'll need a `setup.py` like this:
+Adding to your Python build system is slightly harder as you'll need a `setup.py` like this (more details are [here](https://pybind11.readthedocs.io/en/stable/compiling.html#modules-with-setuptools)):
 
 ```python
 from glob import glob
@@ -52,7 +51,7 @@ ext_modules = [Pybind11Extension("python_example", sorted(glob("src/*.cpp")))]
 ...
 ```
 
-More details are [here](https://pybind11.readthedocs.io/en/stable/compiling.html#modules-with-setuptools). There's  also a one-liner to build the extension for simple use cases which I've used in my example, however there's a [bug I've opened a PR for](https://github.com/pybind/pybind11/pull/5360).
+There's also a one-liner to build the extension for simple use cases; I've used this approach in my example. There's a bug in the documentation for it, though I've [opened a PR](https://github.com/pybind/pybind11/pull/5360) to fix it!
 
 ## Writing the Extension
 
@@ -76,7 +75,7 @@ fn my_extension(m: &Bound<'_, PyModule>) -> PyResult<()> {
 
 ### C++
 
-Similarly you need to include a header file, then register your functions:
+Here you just need to register your functions and include the appropriate header file:
 
 ```cpp
 #include <pybind11/pybind11.h>
@@ -103,10 +102,10 @@ These can be solved with some extra work but the Rust setup didn't have similar 
 On my (old) i5-2557M the sample script runs 40% faster using Rust than C++:
 
 ```bash
-$ python main.py rust
+$ python main.py cpp
 Language cpp took: 14.29s avg over 10 runs
 
-$ python main.py cpp
+$ python main.py rust
 Language rust took: 8.72s avg over 10 runs
 ```
 
@@ -115,8 +114,8 @@ I'm sure I could make the C++ version just as fast (is it just some compiler fla
 
 ## Takeaways
 
-Overall the Rust setup is easier to use. Things *just work* out of the box and the associated tooling is sleeker (just a few lines of config in Rust vs a large `setup.py` for C++).
+Overall the Rust setup is easier to use. Things *just work* out of the box and the associated tooling is simpler (just a few lines of config in Rust vs a large `setup.py` for C++).
 
-I also found the Rust version easier to write as the compiler gives clear error messages, though the Rust learning curve is definitely steeper. 
+I also found the Rust version easier to write as the compiler gives clearer error messages, though the Rust learning curve is definitely steeper than for C++.
 
-There are many issues I haven't considered (eg scalability, maintainability, etc), especially for larger systems, however for relatively small projects Rust seems easier to use than C++ to create Python extensions, which may explain the recent popularity of such libraries written with Rust.
+There are issues I haven't considered (eg scalability, maintainability, etc), especially for larger systems, however for relatively small projects Rust seems easier to use than C++ to create Python extensions, which may explain the recent popularity of such libraries written with Rust.
