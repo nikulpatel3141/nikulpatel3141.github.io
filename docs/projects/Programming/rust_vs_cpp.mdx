@@ -17,9 +17,10 @@ Rust and C++ are generally faster than Python but have to be compiled and usuall
 
 Other advantages of C++ and Rust include being strongly typed and parallelism (Python's [GIL](https://realpython.com/python-gil/) doesn't limit parallelism in C++ and Rust extension libraries).
 
-## Rust
 
-### Installation
+## Installation
+
+### Rust
 
 [Maturin](https://github.com/PyO3/maturin) makes PyO3 easy to use for new projects. In your new project directory:
 
@@ -30,20 +31,92 @@ $ maturin init  # follow the prompts
 ...
 ```
 
-For existing projects you just need to add a few lines to your `pyproject.toml` and `Cargo.toml`. More details are [here](https://pyo3.rs/v0.22.2/getting-started#adding-to-an-existing-project).
+For existing projects you need to edit your `pyproject.toml` and `Cargo.toml` files. More details are [here](https://pyo3.rs/v0.22.2/getting-started#adding-to-an-existing-project).
 
-### Writing the Extension
+### C++
+
+The easiest way to install is via `pip`:
+
+```bash
+$ pip install pybind11
+```
+
+Adding to your Python build system is harder than with Rust as you'll need a `setup.py` like this:
+
+```python
+from glob import glob
+from setuptools import setup
+from pybind11.setup_helpers import Pybind11Extension, build_ext
+
+ext_modules = [Pybind11Extension("python_example", sorted(glob("src/*.cpp")))]
+...
+```
+
+More details are [here](https://pybind11.readthedocs.io/en/stable/compiling.html#modules-with-setuptools). There's  also a one-liner to build the extension for simple use cases which I've used in my example, however there's a [bug I've opened a PR for](https://github.com/pybind/pybind11/pull/5360).
+
+## Writing the Extension
+
+### Rust
+
+You need to 'decorate' the functions you want to expose, then register them:
+
+```rust
+use pyo3::prelude::*;
+
+#[pyfunction]
+fn rust_function(...) -> ...
+
+#[pymodule]
+fn my_extension(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(rust_function, m)?)?;
+    Ok(())
+}
+
+```
+
+### C++
+
+Similarly you need to include a header file, then register your functions:
+
+```cpp
+#include <pybind11/pybind11.h>
+
+int cpp_function(...) { ... }
+
+PYBIND11_MODULE(mandelbrot_cpp, m) {
+    m.doc() = "pybind11 example plugin"; // optional module docstring
+
+    m.def("cpp_function", &cpp_function, "A CPP function");
+}
+
+```
+
+I came across a few downsides with this setup:
+
+- It [doesn't support kwargs](https://pybind11.readthedocs.io/en/stable/advanced/functions.html#accepting-args-and-kwargs) as is
+- My IDE complains about the `PYBIND11_MODULE` block
+
+These can be solved with some extra work but the Rust setup didn't have similar issues.
+
+## Performance
+
+On my (old) i5-2557M the sample script runs 40% faster using Rust than C++:
+
+```bash
+$ python main.py rust
+Language cpp took: 14.29s avg over 10 runs
+
+$ python main.py cpp
+Language rust took: 8.72s avg over 10 runs
+```
+
+I'm sure I could make the C++ version just as fast (is it just some compiler flag I'm missing?), though I've made no efforts to optimise either script.
 
 
+## Takeaways
 
+Overall the Rust setup is easier to use. Things *just work* out of the box and the associated tooling is sleeker (just a few lines of config in Rust vs a large `setup.py` for C++).
 
+I also found the Rust version easier to write as the compiler gives clear error messages, though the Rust learning curve is definitely steeper. 
 
-
-Rust *just works*
-runs faster
-has iterators (awkward to use)
-supports kwargs out of the box
-docstring???
-uses macros, no ide complaints (no magic header file)
-tooling is sleeker (no setup.py)
-
+There are many issues I haven't considered (eg scalability, maintainability, etc), especially for larger systems, however for relatively small projects Rust seems easier to use than C++ to create Python extensions, which may explain the recent popularity of such libraries written with Rust.
