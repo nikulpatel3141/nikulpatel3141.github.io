@@ -119,3 +119,22 @@ Overall the Rust setup is easier to use. Things *just work* out of the box and t
 I also found the Rust version easier to write as the compiler gives clearer error messages, though the Rust learning curve is definitely steeper than for C++.
 
 There are issues I haven't considered (eg scalability, maintainability, etc), especially for larger systems, however for relatively small projects Rust seems easier to use than C++ to create Python extensions, which may explain the recent popularity of such libraries written with Rust.
+
+
+## The Result
+
+This post would be incomplete without plotting the results!
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+import mandelbrot_rs
+
+result = np.array(mandelbrot_rs.generate_mandelbrot(-2, 2, -2, 2, 1000, 10)).reshape(1000, 1000)
+plt.matshow(result)
+plt.show()
+```
+
+<img src={require('@site/static/img/mandelbrot.png').default} />
+
