@@ -13,6 +13,9 @@ productivity:
   
 business:
   label: 'business'
+
+health:
+  label: 'health'
   
 go:
   label: 'go'
