@@ -4,6 +4,8 @@ title: "Coffee"
 
 Here's a list of coffee shops I'd recommend for great coffee:
 
+<!-- truncate -->
+
 ### London
 
 - Kiss the Hippo Coffee (Fitzrovia)
