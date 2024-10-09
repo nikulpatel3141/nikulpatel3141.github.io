@@ -83,7 +83,7 @@ const config: Config = {
           label: 'Wiki',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
-        { to: '/home', position: 'right', className: 'header-home-link header-link'},
+        { to: '/home', position: 'left', label: "Home"},
         {
           href: 'https://github.com/nikulpatel3141',
           position: 'right',
