@@ -2,6 +2,7 @@
 title: "UK Short Disclosure Tracker"
 date: 2023-01-02T17:24:21Z
 description: "Tracker for disclosed UK shorts on the FCA website"
+sidebar_position: 1
 ---
 
 import { useEffect } from 'react';
@@ -12,8 +13,6 @@ export const ShortLoader = () => {
 }
 
 Below is a monitor updated daily for tracking the top 10 individual and overall disclosed UK short positions.
-
-Note: this monitor no longer updates as the Yahoo Finance API is no longer available
 
 ## Top Overall Shorts
 <div id='secShortTracker'></div>
@@ -26,14 +25,12 @@ The code to generate this report is on my GitHub page [here](https://github.com/
 
 ## Metrics
 
-It displays various metrics for the short positions from the lookback date to the as of date:
 - Return: the (adjusted) return of the security
 - PnL: the disclosed PnL from the short position
   - Note: this figure will not be entirely inaccurate since
     1) It doesn't account for intraday PnL
     2) The short positions are only reported to 1dp
-- Days to Cover: The number of days it will take to fully liquidate the position at 100% trading volume
-  - For simplicity I've used a 22 day average as an estimate the trading volume
+- Days to Cover: The number of days it will take to fully liquidate the position at 100% trading volume (22 day average)
 
 ### Context
 

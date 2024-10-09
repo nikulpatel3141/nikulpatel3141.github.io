@@ -3,6 +3,7 @@ title: "Quote Scraper"
 date: 2022-10-20T20:46:11+01:00
 description: "A Goodreads quote scraper written in Go"
 tags: [go, programming]
+sidebar_position: 8
 ---
 
 I was interested in learning more about the Go programming language so I wrote a short script in Go to scrape quotes from Goodreads.

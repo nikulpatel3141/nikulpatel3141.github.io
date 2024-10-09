@@ -4,6 +4,8 @@ date: 2022-12-20T09:20:10Z
 description: ""
 ---
 
+This is deprecated; my old HUGO website had a live market data banner at the top.
+
 # Market Data Banner
 
 The banner above for financial index returns (FTSE100, ...) is generated using data from FT and scraped using GitHub Actions.
