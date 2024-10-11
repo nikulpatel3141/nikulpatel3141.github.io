@@ -30,8 +30,8 @@ const config: Config = {
   },
 
   scripts: [
-    {src: "/js/flow_tracker.js", defer: true},
-    {src: "/js/short_tracker.js", defer: true},
+    { src: "/js/flow_tracker.js", defer: true },
+    { src: "/js/short_tracker.js", defer: true },
   ],
 
   presets: [
@@ -83,7 +83,7 @@ const config: Config = {
           label: 'Wiki',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
-        { to: '/home', position: 'left', label: "Home"},
+        { to: '/home', position: 'left', label: "Home" },
         {
           href: 'https://github.com/nikulpatel3141',
           position: 'right',
@@ -100,11 +100,6 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} Nikul Patel, built with Docusaurus.`,
     },
     prism: {
