@@ -5,6 +5,7 @@ description: ""
 draft: false
 tags: [productivity]
 author: "Cal Newport"
+sidebar_class_name: "productivity-badge"
 ---
 
 # Overview

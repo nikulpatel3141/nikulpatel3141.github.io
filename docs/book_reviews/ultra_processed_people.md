@@ -4,6 +4,7 @@ date: 2024-09-29T18:45:59+01:00
 description: "An eye-opening investigation into the science, economics, history and production of ultra-processed food"
 tags: [health]
 authors: ["Chris van Tulleken"]
+sidebar_class_name: "health-badge"
 ---
 
 In this book Dr Tulleken explores Ultra Processed Food (UPF) and its consequences on our health (note this is *not* a diet book).
