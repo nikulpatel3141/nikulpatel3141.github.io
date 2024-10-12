@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Nikul Patel',
-  tagline: '#TODO: add a tagline',
+  tagline: '',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
