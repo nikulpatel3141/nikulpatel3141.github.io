@@ -4,7 +4,7 @@ date: 2024-10-27T09:10+00:00
 description: "What Every Web Developer Should Know About HTTP"
 tags: [programming]
 authors: ["K. Scott Allen"]
-roi: "High"
+worthReading: "Yes"
 link: "https://www.goodreads.com/book/show/18516605-what-every-web-developer-should-know-about-http"
 ---
 

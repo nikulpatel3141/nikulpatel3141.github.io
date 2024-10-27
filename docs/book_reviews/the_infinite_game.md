@@ -4,10 +4,12 @@ date: 2024-08-23T21:09:22+01:00
 description: ""
 draft: false
 tags: [business]
-author: "Simon Sinek"
+authors: ["Simon Sinek"]
 ---
 
-# The Infinite Game
+import BookReview from '@site/src/components/BookReview';
+
+<BookReview frontMatter={frontMatter} />
 
 ## Overview
 
