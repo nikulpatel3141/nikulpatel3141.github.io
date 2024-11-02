@@ -34,10 +34,5 @@ I've enjoyed using Go for this project and see some advantages over Python:
     - ...compared to Python where we'd always need an interpreter + correct libraries installed
       - There are things like [PyInstaller](https://pyinstaller.org/en/stable/) that can compile python, but the resulting binary will typically be larger and less performant than the original script
 4. Go is statically typed
-    - No more silly type errors at runtime!
-
-
-Something I do miss in Go is the REPL in Python. A good compromise would be to develop the main logic quickly in Python, then transfer to Go.
-
-
+    - No more runtime type errors at!
 
