@@ -1,0 +1,39 @@
+---
+title: "UK Shorts Tracker"
+date: "2023-01-02"
+description: "Tracker for disclosed UK short positions on the FCA website"
+tags: ["Python", "Finance", "Data"]
+github: "https://github.com/nikulpatel3141/UK-Short-Tracker"
+featured: true
+---
+
+Participants in the UK financial market are required to disclose their positions when above a certain threshold (0.2% of shares outstanding as of writing) — these are published daily by the FCA.
+
+<ShortsTracker />
+
+## Code
+
+The code to generate this report is on [GitHub](https://github.com/nikulpatel3141/UK-Short-Tracker), along with a README explaining how it works.
+
+## Metrics
+
+- **Return** — the (adjusted) return of the security
+- **PnL** — the disclosed PnL from the short position
+- **Days to Cover** — the number of days to fully liquidate the position at 100% trading volume (22-day average)
+
+### Context
+
+- A lookback period of 5 days is used since funds disclosing shorts typically won't be actively trading in and out of positions due to slippage concerns
+- Days to Cover is a useful metric: if large and shorts perform badly, it's difficult to exit the position
+- Many of these funds are long-short, meaning PnL relative to a benchmark (e.g. VUKE) may be more useful than raw PnL
+
+## Disclaimer
+
+The information on this page is provided for information only and should not be constituted as investment advice.
+
+## Sources
+
+Data from Yahoo Finance, OpenFIGI, and the FCA:
+- [FCA Short Selling Disclosures](https://www.fca.org.uk/markets/short-selling/notification-disclosure-net-short-positions)
+- [Yahoo Finance](https://uk.finance.yahoo.com/)
+- [OpenFIGI](https://www.openfigi.com/)

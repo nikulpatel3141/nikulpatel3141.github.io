@@ -1,0 +1,34 @@
+---
+title: "ETF Flow Tracker"
+date: "2023-03-26"
+description: "Track Fund Flows from ETF products using publicly available data with a cloud pipeline on GCP"
+tags: ["Python", "Cloud", "GCP"]
+github: "https://github.com/nikulpatel3141/ETF-Scraper"
+featured: true
+---
+
+This page tracks flows into/out of the largest 100 US Equity ETFs across SSGA, iShares and Invesco for S&P 500 constituents. The data pipeline runs on GCP (Google Cloud Platform).
+
+These numbers give an idea of the movement of capital invested in ETFs, and hence give colour on macroeconomic trends.
+
+<FlowTracker />
+
+## How it Works
+
+This project uses an ETF scraper to collect ETF holdings and a few scripts to run a data pipeline on Google Cloud Platform:
+
+1. Scrape ETF holdings and save to GCS (cloud storage) — funds scraped are specified in a config file on GCS
+2. Load the holdings files into BigQuery (GCP database)
+3. Calculate flows for S&P 500 constituents using a SQL query
+4. Format the results into HTML tables and output to GCS
+5. Run a GitHub Actions workflow to pick up the results and publish them
+
+Steps 1–4 run as a scheduled Google Cloud Run Job.
+
+## Disclaimer
+
+The information on this page is provided for information only and should not be constituted as investment advice. I don't provide any warranty as to the accuracy of the information on this site.
+
+## Sources
+
+All results are from public ETF holdings published by SSGA, iShares, and Invesco. Vanguard is excluded since they only publish holdings monthly (which means VOO and VTI are absent).
