@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
+import ThemeWrapper from '@/components/ThemeWrapper';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import './globals.css';
@@ -16,29 +17,23 @@ const ibmPlexMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s — Nikul Patel',
-    default: 'Nikul Patel',
-  },
-  description:
-    'Software developer with a background in quantitative finance. Building tools for markets, writing about interesting things.',
+  title: { template: '%s — Nikul Patel', default: 'Nikul Patel' },
+  description: 'Software developer with a background in quantitative finance.',
   metadataBase: new URL('https://nikulpatel3141.github.io'),
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={ibmPlexMono.variable}>
-      <body className="min-h-screen antialiased">
+      <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <div className="flex flex-col min-h-screen">
-            <Nav />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <ThemeWrapper>
+            <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+              <Nav />
+              <main style={{ flex: 1 }}>{children}</main>
+              <Footer />
+            </div>
+          </ThemeWrapper>
         </ThemeProvider>
       </body>
     </html>

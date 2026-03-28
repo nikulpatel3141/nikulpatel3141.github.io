@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Box, Grid, Heading, Text } from '@radix-ui/themes';
 import { getProjects } from '@/lib/content';
 import ProjectCard from '@/components/ProjectCard';
 
@@ -7,20 +8,19 @@ export const metadata: Metadata = {
   description: 'Things I have built — from market data pipelines to language performance benchmarks.',
 };
 
+const cx = { maxWidth: 960, margin: '0 auto', padding: '0 1.25rem' };
+
 export default function ProjectsPage() {
   const projects = getProjects();
-
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-      <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-3">Projects</h1>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-10">
+    <Box py="9" style={cx}>
+      <Heading size="8" mb="2">Projects</Heading>
+      <Text size="3" color="gray" mb="7" style={{ display: 'block' }}>
         Things I have built, mostly around markets, data, and tooling.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
-      </div>
-    </div>
+      </Text>
+      <Grid columns={{ initial: '1', sm: '2', md: '3' }} gap="3">
+        {projects.map(p => <ProjectCard key={p.slug} project={p} />)}
+      </Grid>
+    </Box>
   );
 }

@@ -1,18 +1,21 @@
 import Script from 'next/script';
+import { Card, Text, Flex } from '@radix-ui/themes';
 
 export default function ShortsTracker() {
   return (
     <>
-      <div className="my-6 overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141416] p-4 space-y-6">
-        <div>
-          <h3 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Most Shorted Companies</h3>
-          <div id="secShortTracker" />
-        </div>
-        <div>
-          <h3 className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 mb-2">Largest Shorts by Fund</h3>
-          <div id="fundShortTracker" />
-        </div>
-      </div>
+      <Card size="2" my="4" style={{ overflowX: 'auto' }}>
+        <Flex direction="column" gap="4">
+          <div>
+            <Text size="2" weight="bold" mb="2" style={{ display: 'block' }}>Most Shorted Companies</Text>
+            <div id="secShortTracker" />
+          </div>
+          <div>
+            <Text size="2" weight="bold" mb="2" style={{ display: 'block' }}>Largest Shorts by Fund</Text>
+            <div id="fundShortTracker" />
+          </div>
+        </Flex>
+      </Card>
       <Script src="/js/short_tracker.js" strategy="afterInteractive" />
     </>
   );

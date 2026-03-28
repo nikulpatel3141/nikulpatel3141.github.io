@@ -1,30 +1,39 @@
+import { Box, Flex, Text, Separator } from '@radix-ui/themes';
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-zinc-200 dark:border-zinc-800">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500 dark:text-zinc-500">
-        <p>© {new Date().getFullYear()} Nikul Patel</p>
-        <nav className="flex items-center gap-4">
-          <Link href="/projects" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            Projects
-          </Link>
-          <Link href="/blog" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            Blog
-          </Link>
-          <Link href="/books" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-            Books
-          </Link>
-          <a
-            href="https://github.com/nikulpatel3141"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-          >
-            GitHub
-          </a>
-        </nav>
-      </div>
-    </footer>
+    <Box style={{ marginTop: '5rem' }}>
+      <Separator size="4" />
+      <Flex
+        align="center"
+        justify="between"
+        wrap="wrap"
+        gap="4"
+        style={{ maxWidth: 960, margin: '0 auto', padding: '1.75rem 1.25rem' }}
+      >
+        <Text size="2" color="gray">© {new Date().getFullYear()} Nikul Patel</Text>
+        <Flex gap="4" wrap="wrap">
+          {[
+            { href: '/projects', label: 'Projects' },
+            { href: '/blog', label: 'Blog' },
+            { href: '/books', label: 'Books' },
+            { href: 'https://github.com/nikulpatel3141', label: 'GitHub', external: true },
+          ].map(({ href, label, external }) => (
+            <Link
+              key={href}
+              href={href}
+              target={external ? '_blank' : undefined}
+              rel={external ? 'noopener noreferrer' : undefined}
+              style={{ textDecoration: 'none' }}
+            >
+              <Text size="2" color="gray" style={{ transition: 'color 0.15s' }}>
+                {label}
+              </Text>
+            </Link>
+          ))}
+        </Flex>
+      </Flex>
+    </Box>
   );
 }
