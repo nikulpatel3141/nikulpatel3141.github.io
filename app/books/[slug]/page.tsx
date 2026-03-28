@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Box, Flex, Heading, Text, Badge } from '@radix-ui/themes';
 import { getBook, getBooks, markdownToHtml } from '@/lib/content';
+import { tagColor } from '@/lib/tagColors';
 
 interface Props { params: Promise<{ slug: string }>; }
 
@@ -41,7 +42,7 @@ export default async function BookPage({ params }: Props) {
           </Text>
         )}
         {book.tags?.map(t => (
-          <Badge key={t} variant="soft" color="gray" size="1" style={{ textTransform: 'capitalize' }}>{t}</Badge>
+          <Badge key={t} variant="soft" color={tagColor(t) as any} size="1" style={{ textTransform: 'capitalize' }}>{t}</Badge>
         ))}
       </Flex>
       <article className="prose" dangerouslySetInnerHTML={{ __html: html }} />

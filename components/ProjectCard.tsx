@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Card, Flex, Heading, Text, Badge } from '@radix-ui/themes';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import type { Project } from '@/lib/types';
+import { tagColor } from '@/lib/tagColors';
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -35,7 +36,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.tags.length > 0 && (
             <Flex gap="1" wrap="wrap" mt="1">
               {project.tags.map(tag => (
-                <Badge key={tag} variant="soft" color="gray" size="1">{tag}</Badge>
+                <Badge key={tag} variant="soft" color={tagColor(tag) as any} size="1">{tag}</Badge>
               ))}
             </Flex>
           )}

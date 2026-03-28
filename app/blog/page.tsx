@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Box, Flex, Heading, Text, Badge } from '@radix-ui/themes';
 import { getBlogPosts } from '@/lib/content';
+import { tagColor } from '@/lib/tagColors';
 
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'Writing about programming, coffee, fitness, and other things I find interesting.',
 };
 
-const cx = { maxWidth: 720, margin: '0 auto', padding: '0 1.25rem' };
+const cx = { maxWidth: 800, margin: '0 auto', padding: '0 1.25rem' };
 
 export default function BlogPage() {
   const posts = getBlogPosts();
@@ -33,7 +34,7 @@ export default function BlogPage() {
                 )}
                 {post.tags?.length > 0 && (
                   <Flex gap="1" mt="2" wrap="wrap">
-                    {post.tags.map(t => <Badge key={t} variant="soft" color="gray" size="1" style={{ textTransform: 'capitalize' }}>{t}</Badge>)}
+                    {post.tags.map(t => <Badge key={t} variant="soft" color={tagColor(t) as any} size="1" style={{ textTransform: 'capitalize' }}>{t}</Badge>)}
                   </Flex>
                 )}
               </Box>

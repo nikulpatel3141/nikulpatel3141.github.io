@@ -20,3 +20,5 @@ function runGetFlowData() {
     }
   );
 }
+
+runGetFlowData();

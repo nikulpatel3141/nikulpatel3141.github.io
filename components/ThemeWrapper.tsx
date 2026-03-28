@@ -19,7 +19,7 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
       accentColor="blue"
       grayColor="slate"
       radius="medium"
-      scaling="95%"
+      scaling="100%"
     >
       {children}
     </Theme>

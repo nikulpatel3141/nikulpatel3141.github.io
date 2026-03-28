@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Box, Flex, Text, IconButton } from '@radix-ui/themes';
@@ -38,25 +39,19 @@ export default function Nav() {
         <Flex
           align="center"
           justify="between"
-          style={{ maxWidth: 960, margin: '0 auto', padding: '0 1.25rem', height: 52 }}
+          style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.25rem', height: 56 }}
         >
           {/* Wordmark */}
           <Link href="/" style={{ textDecoration: 'none' }}>
             <Flex align="center" gap="2">
-              <Box
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: 12,
-                  fontWeight: 700,
-                  background: 'var(--gray-12)',
-                  color: 'var(--gray-1)',
-                  padding: '2px 6px',
-                  borderRadius: 4,
-                  letterSpacing: 1,
-                }}
-              >
-                NP
-              </Box>
+              <Image
+                src="/img/knight.svg"
+                alt="Knight"
+                width={30}
+                height={30}
+                className="knight-logo"
+                unoptimized
+              />
               <Text
                 size="2"
                 style={{ fontFamily: 'var(--font-mono)', color: 'var(--gray-11)', display: 'none' }}
@@ -70,11 +65,7 @@ export default function Nav() {
           {/* Desktop nav */}
           <Flex align="center" gap="1" style={{ display: 'none' }} className="desktop-nav">
             {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                style={{ textDecoration: 'none' }}
-              >
+              <Link key={href} href={href} style={{ textDecoration: 'none' }}>
                 <Text
                   size="2"
                   className={isActive(href) ? 'nav-link-active' : ''}

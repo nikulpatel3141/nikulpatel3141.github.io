@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Box, Flex, Grid, Heading, Text, Separator } from '@radix-ui/themes';
 import { GitHubLogoIcon, LinkedInLogoIcon, ArrowRightIcon } from '@radix-ui/react-icons';
@@ -6,7 +7,7 @@ import ProjectCard from '@/components/ProjectCard';
 import BookCard from '@/components/BookCard';
 import DailyQuote from '@/components/DailyQuote';
 
-const cx = { maxWidth: 960, margin: '0 auto', padding: '0 1.25rem' };
+const cx = { maxWidth: 1100, margin: '0 auto', padding: '0 1.25rem' };
 
 function SectionHeader({ title, href }: { title: string; href: string }) {
   return (
@@ -29,46 +30,65 @@ export default function HomePage() {
   return (
     <Box py="9" style={cx}>
       {/* Hero */}
-      <Box mb="9">
-        <Heading size="9" mb="3" style={{ letterSpacing: '-0.02em' }}>
-          Hi, I&rsquo;m Nikul.
-        </Heading>
-        <Text size="4" color="gray" mb="2" style={{ display: 'block', fontWeight: 500 }}>
-          Software developer.
-        </Text>
-        <Text size="3" color="gray" style={{ display: 'block', maxWidth: 560, lineHeight: 1.75 }}>
-          I have a background in quantitative finance. I build tools for markets, write about
-          things I find interesting, and occasionally compete in powerlifting.
-        </Text>
-        <Flex gap="3" mt="5" wrap="wrap">
-          <a
-            href="https://github.com/nikulpatel3141"
-            target="_blank"
-            rel="noopener noreferrer"
+      <Flex align="center" justify="between" gap="8" mb="9">
+        <Box style={{ flex: 1, minWidth: 0 }}>
+          <Heading size="9" mb="3" style={{ letterSpacing: '-0.02em' }}>
+            Hi, I&rsquo;m Nikul.
+          </Heading>
+          <Text size="4" color="gray" mb="2" style={{ display: 'block', fontWeight: 500 }}>
+            Software developer.
+          </Text>
+          <Text size="3" color="gray" style={{ display: 'block', maxWidth: 520, lineHeight: 1.75 }}>
+            I build tools for markets, write about things I find interesting, and
+            occasionally compete in powerlifting.
+          </Text>
+          <Flex gap="3" mt="5" wrap="wrap">
+            <a
+              href="https://github.com/nikulpatel3141"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                padding: '8px 16px', borderRadius: 6, fontSize: 14, fontWeight: 500,
+                background: 'var(--gray-12)', color: 'var(--gray-1)', textDecoration: 'none',
+                transition: 'opacity 0.15s',
+              }}
+            >
+              <GitHubLogoIcon width={15} height={15} /> GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nikul-patel-048a47113"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                padding: '8px 16px', borderRadius: 6, fontSize: 14, fontWeight: 500,
+                border: '1px solid var(--gray-6)', color: 'var(--gray-12)', textDecoration: 'none',
+                transition: 'opacity 0.15s',
+              }}
+            >
+              <LinkedInLogoIcon width={15} height={15} /> LinkedIn
+            </a>
+          </Flex>
+        </Box>
+
+        {/* Decorative fractal image — hidden on small screens */}
+        <Box className="hero-visual" style={{ flexShrink: 0 }}>
+          <Image
+            src="/img/mandelbrot.png"
+            alt="Mandelbrot fractal"
+            width={320}
+            height={320}
             style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '8px 16px', borderRadius: 6, fontSize: 14, fontWeight: 500,
-              background: 'var(--gray-12)', color: 'var(--gray-1)', textDecoration: 'none',
-              transition: 'opacity 0.15s',
+              borderRadius: 20,
+              opacity: 0.75,
+              objectFit: 'cover',
+              border: '1px solid var(--gray-4)',
             }}
-          >
-            <GitHubLogoIcon width={15} height={15} /> GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nikul-patel-048a47113"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '8px 16px', borderRadius: 6, fontSize: 14, fontWeight: 500,
-              border: '1px solid var(--gray-6)', color: 'var(--gray-12)', textDecoration: 'none',
-              transition: 'opacity 0.15s',
-            }}
-          >
-            <LinkedInLogoIcon width={15} height={15} /> LinkedIn
-          </a>
-        </Flex>
-      </Box>
+            unoptimized
+          />
+        </Box>
+      </Flex>
 
       {/* Daily quote */}
       <Box mb="9">
@@ -123,7 +143,7 @@ export default function HomePage() {
       {books.length > 0 && (
         <Box>
           <SectionHeader title="Reading" href="/books" />
-          <Grid columns={{ initial: '1', sm: '2' }} gap="3">
+          <Grid columns={{ initial: '1', sm: '2', md: '3' }} gap="3">
             {books.map(b => <BookCard key={b.slug} book={b} />)}
           </Grid>
         </Box>

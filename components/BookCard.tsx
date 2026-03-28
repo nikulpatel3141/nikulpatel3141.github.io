@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Card, Flex, Heading, Text, Badge } from '@radix-ui/themes';
 import type { Book } from '@/lib/types';
+import { tagColor } from '@/lib/tagColors';
 
 export default function BookCard({ book }: { book: Book }) {
   const excerpt = book.content
@@ -29,7 +30,13 @@ export default function BookCard({ book }: { book: Book }) {
           {book.tags?.length > 0 && (
             <Flex gap="1" wrap="wrap" mt="2">
               {book.tags.map(tag => (
-                <Badge key={tag} variant="soft" color="gray" size="1" style={{ textTransform: 'capitalize' }}>
+                <Badge
+                  key={tag}
+                  variant="soft"
+                  color={tagColor(tag) as any}
+                  size="1"
+                  style={{ textTransform: 'capitalize' }}
+                >
                   {tag}
                 </Badge>
               ))}

@@ -18,13 +18,22 @@ const ibmPlexMono = localFont({
 
 export const metadata: Metadata = {
   title: { template: '%s — Nikul Patel', default: 'Nikul Patel' },
-  description: 'Software developer with a background in quantitative finance.',
+  description: 'Software developer.',
   metadataBase: new URL('https://nikulpatel3141.github.io'),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={ibmPlexMono.variable}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <ThemeWrapper>

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Box, Flex, Heading, Text, Badge } from '@radix-ui/themes';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import { getProject, getProjects, markdownToHtml } from '@/lib/content';
+import { tagColor } from '@/lib/tagColors';
 import FlowTracker from '@/components/FlowTracker';
 import ShortsTracker from '@/components/ShortsTracker';
 
@@ -53,7 +54,7 @@ export default async function ProjectPage({ params }: Props) {
 
       {project.tags.length > 0 && (
         <Flex gap="1" wrap="wrap" mb="7">
-          {project.tags.map(tag => <Badge key={tag} variant="soft" color="gray" size="1">{tag}</Badge>)}
+          {project.tags.map(tag => <Badge key={tag} variant="soft" color={tagColor(tag) as any} size="1">{tag}</Badge>)}
         </Flex>
       )}
 
