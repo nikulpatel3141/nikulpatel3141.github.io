@@ -28,7 +28,7 @@ export default function HomePage() {
   const books = getBooks().slice(0, 4);
 
   return (
-    <Box py="9" style={cx}>
+    <Box pt="7" pb="9" style={cx}>
       {/* Hero */}
       <Flex align="center" justify="between" gap="8" mb="9">
         <Box style={{ flex: 1, minWidth: 0 }}>

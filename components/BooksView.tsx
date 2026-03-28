@@ -92,10 +92,14 @@ export default function BooksView({ books }: { books: Book[] }) {
             </TextField.Slot>
           </TextField.Root>
 
-          <Flex gap="1">
+          <Flex
+            align="center"
+            gap="1"
+            style={{ background: 'var(--gray-3)', borderRadius: 8, padding: 3, display: 'inline-flex' }}
+          >
             <IconButton
-              size="2"
-              variant={view === 'grid' ? 'soft' : 'ghost'}
+              size="1"
+              variant={view === 'grid' ? 'solid' : 'ghost'}
               color="gray"
               onClick={() => setView('grid')}
               aria-label="Grid view"
@@ -103,8 +107,8 @@ export default function BooksView({ books }: { books: Book[] }) {
               <ViewGridIcon />
             </IconButton>
             <IconButton
-              size="2"
-              variant={view === 'list' ? 'soft' : 'ghost'}
+              size="1"
+              variant={view === 'list' ? 'solid' : 'ghost'}
               color="gray"
               onClick={() => setView('list')}
               aria-label="List view"

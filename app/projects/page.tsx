@@ -13,7 +13,7 @@ const cx = { maxWidth: 1100, margin: '0 auto', paddingInline: '1.25rem' };
 export default function ProjectsPage() {
   const projects = getProjects();
   return (
-    <Box py="9" style={cx}>
+    <Box pt="7" pb="9" style={cx}>
       <Heading size="8" mb="2">Projects</Heading>
       <Text size="3" color="gray" mb="7" style={{ display: 'block' }}>
         Things I have built, mostly around markets, data, and tooling.

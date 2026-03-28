@@ -13,9 +13,9 @@ const cx = { maxWidth: 1100, margin: '0 auto', paddingInline: '1.25rem' };
 export default function BooksPage() {
   const books = getBooks();
   return (
-    <Box py="9" style={cx}>
+    <Box pt="7" pb="9" style={cx}>
       <Heading size="8" mb="2">Books</Heading>
-      <Text size="3" color="gray" mb="6" style={{ display: 'block' }}>
+      <Text size="3" color="gray" mb="4" style={{ display: 'block' }}>
         Books I have read and found worth noting, with brief summaries.
       </Text>
       <BooksView books={books} />

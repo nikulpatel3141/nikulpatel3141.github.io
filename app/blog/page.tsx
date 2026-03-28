@@ -13,9 +13,9 @@ const cx = { maxWidth: 800, margin: '0 auto', paddingInline: '1.25rem' };
 export default function BlogPage() {
   const posts = getBlogPosts();
   return (
-    <Box py="9" style={cx}>
+    <Box pt="7" pb="9" style={cx}>
       <Heading size="8" mb="2">Blog</Heading>
-      <Text size="3" color="gray" mb="7" style={{ display: 'block' }}>Writing about things I find interesting.</Text>
+      <Text size="3" color="gray" mb="4" style={{ display: 'block' }}>Writing about things I find interesting.</Text>
       <BlogView posts={posts} />
     </Box>
   );
