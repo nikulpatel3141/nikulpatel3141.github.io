@@ -7,7 +7,7 @@ import ProjectCard from '@/components/ProjectCard';
 import BookCard from '@/components/BookCard';
 import DailyQuote from '@/components/DailyQuote';
 
-const cx = { maxWidth: 1100, margin: '0 auto', padding: '0 1.25rem' };
+const cx = { maxWidth: 1100, margin: '0 auto', paddingInline: '1.25rem' };
 
 function SectionHeader({ title, href }: { title: string; href: string }) {
   return (
@@ -40,7 +40,7 @@ export default function HomePage() {
           </Text>
           <Text size="3" color="gray" style={{ display: 'block', maxWidth: 520, lineHeight: 1.75 }}>
             I build tools for markets, write about things I find interesting, and
-            occasionally compete in powerlifting.
+            used to compete in powerlifting.
           </Text>
           <Flex gap="3" mt="5" wrap="wrap">
             <a

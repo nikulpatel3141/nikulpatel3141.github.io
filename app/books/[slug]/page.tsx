@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const cx = { maxWidth: 720, margin: '0 auto', padding: '0 1.25rem' };
+const cx = { maxWidth: 720, margin: '0 auto', paddingInline: '1.25rem' };
 
 export default async function BookPage({ params }: Props) {
   const { slug } = await params;

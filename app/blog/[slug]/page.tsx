@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: post.title, description: post.description };
 }
 
-const cx = { maxWidth: 720, margin: '0 auto', padding: '0 1.25rem' };
+const cx = { maxWidth: 720, margin: '0 auto', paddingInline: '1.25rem' };
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;

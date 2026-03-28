@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Books I have read and found worth noting.',
 };
 
-const cx = { maxWidth: 1100, margin: '0 auto', padding: '0 1.25rem' };
+const cx = { maxWidth: 1100, margin: '0 auto', paddingInline: '1.25rem' };
 
 export default function BooksPage() {
   const books = getBooks();

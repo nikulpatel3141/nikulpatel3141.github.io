@@ -25,7 +25,7 @@ const TRACKERS: Record<string, React.ReactNode> = {
   'uk-shorts-tracker': <ShortsTracker />,
 };
 
-const cx = { maxWidth: 720, margin: '0 auto', padding: '0 1.25rem' };
+const cx = { maxWidth: 720, margin: '0 auto', paddingInline: '1.25rem' };
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
