@@ -72,12 +72,7 @@ export default function AboutPage() {
       {/* Now */}
       <Section title="Now">
         <Text size="3" style={{ lineHeight: 1.8, color: 'var(--gray-12)', display: 'block' }}>
-          Playing with {link('https://www.anthropic.com/claude-code', 'Claude Code')} and slowly
-          working through the books on the{' '}
-          <a href="/books" style={{ color: 'var(--accent-9)', textDecoration: 'underline', textUnderlineOffset: 3 }}>
-            reading list
-          </a>
-          .
+          Playing with {link('https://www.anthropic.com/claude-code', 'Claude Code')}.
         </Text>
       </Section>
 
