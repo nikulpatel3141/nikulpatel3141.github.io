@@ -72,7 +72,8 @@ export default function AboutPage() {
       {/* Now */}
       <Section title="Now">
         <Text size="3" style={{ lineHeight: 1.8, color: 'var(--gray-12)', display: 'block' }}>
-          Playing with {link('https://www.anthropic.com/claude-code', 'Claude Code')}.
+          Exploring agentic coding workflows with{' '}
+          {link('https://www.anthropic.com/claude-code', 'Claude Code')}.
         </Text>
       </Section>
 
