@@ -94,26 +94,26 @@ export default function BooksView({ books }: { books: Book[] }) {
 
           <Flex
             align="center"
-            gap="1"
-            style={{ background: 'var(--gray-3)', borderRadius: 8, padding: 3, display: 'inline-flex' }}
+            gap="2"
+            style={{ background: 'var(--gray-3)', borderRadius: 8, padding: 4, display: 'inline-flex' }}
           >
             <IconButton
-              size="1"
+              size="2"
               variant={view === 'grid' ? 'solid' : 'ghost'}
               color="gray"
               onClick={() => setView('grid')}
               aria-label="Grid view"
             >
-              <ViewGridIcon />
+              <ViewGridIcon width={16} height={16} />
             </IconButton>
             <IconButton
-              size="1"
+              size="2"
               variant={view === 'list' ? 'solid' : 'ghost'}
               color="gray"
               onClick={() => setView('list')}
               aria-label="List view"
             >
-              <ViewHorizontalIcon />
+              <ViewHorizontalIcon width={16} height={16} />
             </IconButton>
           </Flex>
         </Flex>
