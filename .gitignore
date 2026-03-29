@@ -1,10 +1,12 @@
 # Dependencies
 /node_modules
 
-# Production
-/build
+# Next.js
+/.next
+/out
 
-# Generated files
+# Production (Docusaurus legacy)
+/build
 .docusaurus
 .cache-loader
 
@@ -20,3 +22,7 @@ yarn-debug.log*
 yarn-error.log*
 
 pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

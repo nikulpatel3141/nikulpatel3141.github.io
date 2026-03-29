@@ -1,0 +1,110 @@
+---
+title: "Rust vs C++ for Python Extensions"
+date: "2024-09-08"
+description: "Comparing Rust and C++ as Python extension languages using PyO3 and pybind11"
+tags: ["Python", "Rust", "C++"]
+github: "https://github.com/nikulpatel3141/MandelbrotPyRsCpp"
+featured: true
+---
+
+Many popular Python projects are using Rust: [Polars](https://github.com/pola-rs/polars), [Pydantic](https://github.com/pydantic/pydantic), [uv, ruff, rye](https://github.com/astral-sh), [orjson](https://github.com/ijl/orjson).
+
+I couldn't find as many using C++, so I investigated both approaches. I used [pybind11](https://pybind11.readthedocs.io/en/stable/index.html) for C++ and [PyO3](https://github.com/PyO3/pyo3) for Rust.
+
+### Why Bother
+
+Rust and C++ are generally faster than Python but are compiled and harder to write. Being able to call Rust or C++ code allows for better performance without the associated downsides — and both are strongly typed with no GIL constraints.
+
+## Installation
+
+### Rust
+
+[Maturin](https://github.com/PyO3/maturin) makes PyO3 easy for new projects:
+
+```bash
+pip install maturin
+maturin init  # follow the prompts
+```
+
+### C++
+
+Install via pip, then add a `setup.py`:
+
+```bash
+pip install pybind11
+```
+
+```python
+from glob import glob
+from setuptools import setup
+from pybind11.setup_helpers import Pybind11Extension, build_ext
+
+ext_modules = [Pybind11Extension("python_example", sorted(glob("src/*.cpp")))]
+```
+
+## Writing the Extension
+
+### Rust
+
+Decorate functions and register them:
+
+```rust
+use pyo3::prelude::*;
+
+#[pyfunction]
+fn rust_function(...) -> ...
+
+#[pymodule]
+fn my_extension(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(rust_function, m)?)?;
+    Ok(())
+}
+```
+
+### C++
+
+Include the header and register:
+
+```cpp
+#include <pybind11/pybind11.h>
+
+int cpp_function(...) { ... }
+
+PYBIND11_MODULE(mandelbrot_cpp, m) {
+    m.def("cpp_function", &cpp_function, "A CPP function");
+}
+```
+
+## Performance
+
+On an i5-2557M the Rust version ran **40% faster** than C++:
+
+```bash
+$ python main.py cpp
+Language cpp took: 14.29s avg over 10 runs
+
+$ python main.py rust
+Language rust took: 8.72s avg over 10 runs
+```
+
+## Takeaways
+
+The Rust setup is simpler overall — things *just work* out of the box. The tooling is leaner (a few lines of config vs a large `setup.py` for C++), the compiler gives clearer error messages, and there are no pybind11-style quirks around kwargs.
+
+The Rust learning curve is steeper than C++, but for relatively small projects, Rust is easier to use as a Python extension language. This likely explains the recent surge in Rust-backed Python libraries.
+
+## The Result
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import mandelbrot_rs
+
+result = np.array(
+    mandelbrot_rs.generate_mandelbrot(-2, 2, -2, 2, 1000, 10)
+).reshape(1000, 1000)
+plt.matshow(result)
+plt.show()
+```
+
+![Mandelbrot Set](/img/mandelbrot.png)
