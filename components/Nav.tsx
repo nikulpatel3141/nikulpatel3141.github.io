@@ -9,6 +9,7 @@ import { HamburgerMenuIcon, Cross1Icon, GitHubLogoIcon, LinkedInLogoIcon } from 
 import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
+  { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/blog', label: 'Blog' },
   { href: '/books', label: 'Books' },
