@@ -11,7 +11,7 @@ This site was originally built with [Docusaurus](https://docusaurus.io/) — fin
 
 ## Goal
 
-Turn a documentation-style site into something that looked like a competent developer made it, while keeping it easy to maintain — drop a markdown file and it appears, no CMS, no config changes.
+Build a clean, professional portfolio while keeping it easy to maintain — drop a markdown file and it appears, no CMS, no config changes.
 
 ## What Happened
 
