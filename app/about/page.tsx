@@ -8,6 +8,17 @@ export const metadata: Metadata = {
 
 const cx = { maxWidth: 680, margin: '0 auto', paddingInline: '1.25rem' };
 
+const link = (href: string, label: string) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: 'var(--accent-9)', textDecoration: 'underline', textUnderlineOffset: 3 }}
+  >
+    {label}
+  </a>
+);
+
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <Box mb="7">
@@ -27,11 +38,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <Flex
-      gap="4"
-      py="2"
-      style={{ borderBottom: '1px solid var(--gray-3)' }}
-    >
+    <Flex gap="4" py="2" style={{ borderBottom: '1px solid var(--gray-3)' }}>
       <Text size="2" color="gray" style={{ width: 120, flexShrink: 0 }}>{label}</Text>
       <Box style={{ flex: 1 }}>{children}</Box>
     </Flex>
@@ -64,13 +71,9 @@ export default function AboutPage() {
 
       {/* Now */}
       <Section title="Now">
-        <Text size="3" style={{ lineHeight: 1.8, color: 'var(--gray-12)', display: 'block' }} mb="3">
-          Currently working on improving the ETF flow and UK shorts trackers — adding better
-          historical views and improving the data pipeline reliability.
-        </Text>
         <Text size="3" style={{ lineHeight: 1.8, color: 'var(--gray-12)', display: 'block' }}>
-          On the side, exploring Rust more seriously after the C++ comparison project, and
-          slowly working through the books on the{' '}
+          Playing with {link('https://www.anthropic.com/claude-code', 'Claude Code')} and slowly
+          working through the books on the{' '}
           <a href="/books" style={{ color: 'var(--accent-9)', textDecoration: 'underline', textUnderlineOffset: 3 }}>
             reading list
           </a>
@@ -84,37 +87,35 @@ export default function AboutPage() {
       <Section title="Uses">
         <Row label="Editor">
           <Text size="2" style={{ color: 'var(--gray-12)' }}>
-            Neovim (daily driver), Helix (exploring)
+            {link('https://helix-editor.com', 'Helix')},{' '}
+            {link('https://cursor.com', 'Cursor')}
           </Text>
         </Row>
         <Row label="Shell">
-          <Text size="2" style={{ color: 'var(--gray-12)' }}>Fish</Text>
+          <Text size="2" style={{ color: 'var(--gray-12)' }}>
+            {link('https://fishshell.com', 'Fish')}
+          </Text>
         </Row>
         <Row label="Terminal">
-          <Text size="2" style={{ color: 'var(--gray-12)' }}>Byobu</Text>
+          <Text size="2" style={{ color: 'var(--gray-12)' }}>
+            {link('https://byobu.org', 'Byobu')}
+          </Text>
         </Row>
         <Row label="Dotfiles">
-          <Flex align="center" gap="2">
-            <Text size="2" style={{ color: 'var(--gray-12)' }}>GNU Stow — </Text>
-            <a
-              href="https://github.com/nikulpatel3141/dotfiles"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: 'var(--accent-9)', fontSize: 14, textDecoration: 'underline', textUnderlineOffset: 3 }}
-            >
-              github.com/nikulpatel3141/dotfiles
-            </a>
-          </Flex>
+          <Text size="2" style={{ color: 'var(--gray-12)' }}>
+            {link('https://www.gnu.org/software/stow/', 'GNU Stow')}
+            {' — '}
+            {link('https://github.com/nikulpatel3141/dotfiles', 'github.com/nikulpatel3141/dotfiles')}
+          </Text>
         </Row>
         <Row label="Python REPL">
-          <Text size="2" style={{ color: 'var(--gray-12)' }}>IPython</Text>
+          <Text size="2" style={{ color: 'var(--gray-12)' }}>
+            {link('https://ipython.org', 'IPython')}
+          </Text>
         </Row>
         <Row label="OS">
-          <Text size="2" style={{ color: 'var(--gray-12)' }}>Linux</Text>
-        </Row>
-        <Row label="Keyboard">
           <Text size="2" style={{ color: 'var(--gray-12)' }}>
-            Caps Lock remapped to Escape
+            {link('https://pop.system76.com', 'Pop!_OS')}
           </Text>
         </Row>
       </Section>
