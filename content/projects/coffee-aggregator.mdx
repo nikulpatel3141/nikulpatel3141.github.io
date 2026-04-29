@@ -1,0 +1,28 @@
+---
+title: "UK Coffee Aggregator"
+date: "2026-04-29"
+description: "Daily-updated map of specialty coffee offerings across UK roasters, scraped and served automatically"
+tags: ["Rust", "Next.js", "GCP", "TypeScript"]
+github: "https://github.com/nikulpatel3141/CoffeeAggregator"
+featured: true
+---
+
+*This post was written with the help of [Claude Code](https://www.anthropic.com/claude-code).*
+
+I drink a lot of specialty coffee and kept having to check each roaster's website individually to see what was in stock. So I built [coffeeaggregator.com](https://www.coffeeaggregator.com) — a daily-updated map of offerings across 8 UK roasters, filterable by origin, price, and tasting notes.
+
+## Goal
+
+One place to browse what's available across UK specialty roasters, updated automatically every morning with no manual work.
+
+## What Happened
+
+**Cloud Run → GitHub Actions.** I started with two Cloud Run services (scraper and builder) running as HTTP servers. That added a lot of scaffolding for what were really just two scripts that needed to run in sequence. Replacing them with GitHub Actions workflows running Rust binaries directly cut the complexity significantly.
+
+**Atomic scraper updates.** Early versions would write directly to the live Firestore collection. If a roaster's site changed mid-run, you'd end up with partial or stale data live. Adding a staging collection fixed this — each run writes to staging first, then swaps atomically once everything succeeds.
+
+**Per-roaster deletion.** The initial approach cleared the entire collection before each run. One failed roaster would wipe everyone else's data. Switching to per-roaster deletion meant a single failure only affects that roaster.
+
+## Takeaways
+
+Most of the engineering work ended up being about reliability rather than features — making sure a bad scrape doesn't corrupt the data that was already good. Starting simpler (GitHub Actions over Cloud Run) would have saved time.
